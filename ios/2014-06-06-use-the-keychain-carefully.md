@@ -31,9 +31,12 @@ Finally, for highly sensitive data, consider augmenting protections offered by t
 
 ## References
  
- * Keychain Services Programming Guide - [https://developer.apple.com/library/ios/documentation/security/Conceptual/keychainServConcepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000897](https://developer.apple.com/library/ios/documentation/security/Conceptual/keychainServConcepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000897)
+ * [Keychain Services Programming Guide][1]
 	
 ## CWE/OWASP
 
  * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2); [M5 - Poor Authorization and Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2014-M5)
  * [CWE 312](http://cwe.mitre.org/data/definitions/312.html), [522](http://cwe.mitre.org/data/definitions/522.html)
+
+<!-- Links -->
+[1]: https://developer.apple.com/library/ios/documentation/security/Conceptual/keychainServConcepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000897
