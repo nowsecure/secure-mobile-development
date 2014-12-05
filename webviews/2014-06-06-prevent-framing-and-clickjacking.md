@@ -42,21 +42,23 @@ APIs designed specifically for WebView can be abused to compromise the security 
 ## References 
 
  * [https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header](https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header)
- 
-	Basic frame busting javascript:
-		if( self != top ) { 
-			
-			 top.location = self.location ;
-			 
-		}
-		
-	IFrame prevention for server-side Apache config file:
-		
-		Header add X-FRAME-OPTIONS "DENY"
-		
-	Another option is to set this value to “SAMEORIGIN” which will only allow a frame from the same domain. This header has been tested on various browsers including Safari on iOS 4 and confirmed to prevent the display of a page in an iFrame. Provided that no requirements exist for delivery in an iFrame, the recommendation is to use DENY.
-	
-	
+
+Basic frame busting javascript:
+
+```javascript
+if( self != top ) { 
+  top.location = self.location ;
+}
+```
+
+IFrame prevention for server-side Apache config file:
+
+```
+Header add X-FRAME-OPTIONS "DENY"
+```
+
+Another option is to set this value to “SAMEORIGIN” which will only allow a frame from the same domain. This header has been tested on various browsers including Safari on iOS 4 and confirmed to prevent the display of a page in an iFrame. Provided that no requirements exist for delivery in an iFrame, the recommendation is to use DENY.
+
 ## CWE/OWASP
 
  * [M1 - Weak Server Side Controls](https://www.owasp.org/index.php/Mobile_Top_10_2014-M1)

@@ -21,10 +21,9 @@ A production app must be signed with a production certificate, not a debug certi
 
 Here's an example of a Keytool command that generates a private key:
 
-	$ keytool -genkey -v -keystore my-release-key.keystore
-	
-	-alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
+```
+$ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+```
 
 ## References
 
