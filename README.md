@@ -8,7 +8,7 @@ This guide gives specific recommendations to use during your development process
 
 To learn about all the vectors that attackers might use on your app, read our [Mobile Security Primer][1].
 
-We revise and invite contributions, and the updated guide is published [here][2] as changes are accepted into the main repository. You can also [Download a PDF][3] version with free registration.
+We revise and invite [contributions](https://github.com/nowsecure/secure-mobile-development/pulls), and the updated guide is published [here][2] as changes are accepted into the main repository. You can also [Download a PDF][3] version with free registration.
 
 We publish this guide under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International [License][4].
 
