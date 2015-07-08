@@ -31,8 +31,8 @@ First fork this repository, make your changes and submit them back to this repos
 To add a new best practice, you should first identify which category it should belong under. Then create your markdown file using the following file format: `YYYY-MM-DD-title-of-the-best-practice.md`. The `YYYY-MM-DD` ultimately does not matter, because we are using Jekyll's post mechanism, it expects it to be in the file name. Use the `template.md` as a start to the best practice and change the details where needed.
 
 <!-- Links -->
-[1]: https://www.nowsecure.com/resources/secure-development/primer/ "Mobile Security Primer"
-[2]: https://www.nowsecure.com/resources/secure-development/ "Secure Mobile Development"
+[1]: https://www.nowsecure.com/resources/secure-mobile-development/primer/mobile-security/ "Mobile Security Primer"
+[2]: https://www.nowsecure.com/resources/secure-mobile-development/ "Secure Mobile Development"
 [3]: https://www.nowsecure.com/resources/downloads/secure-mobile-development/ "Secure Mobile Devlopment - Download a PDF"
 [4]: LICENSE.md "License"
 [5]: http://jekyllrb.com "Jekyll"
