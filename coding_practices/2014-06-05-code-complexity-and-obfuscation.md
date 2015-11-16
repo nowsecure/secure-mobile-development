@@ -13,7 +13,7 @@ order: 101
 
 ## Details 
 
-Reverse engineering apps can provide valuable insight into how your app works. By making them more complex internally, you put make it more difficult for attackers to see the clear operation of the app, which may reduce the number of attack vectors.
+Reverse engineering apps can provide valuable insight into how your app works. By making them more complex internally, you make it more difficult for attackers to see the clear operation of the app, which may reduce the number of attack vectors.
 
 ## Remediation
 
