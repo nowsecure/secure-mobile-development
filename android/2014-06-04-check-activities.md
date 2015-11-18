@@ -8,15 +8,15 @@ categories:
 order: 603
 ---
 
-## Details 
+## Details
 
-Typically in Android applications an Activity is a “Screen” in an app. An activity can be invoked by any application if it is exported, thus allowing the user access to regions of the application often in unintended ways. If you define an Intent filter for an Activity it will automatically make it public and accessible by other applications. Even if an Activity is not public it can still be invoked with root privileges. This could allow an attacker to jump around an application in a way the developer did not intend, such as jumping past a password lock screen to access the data.
+An Activity can be invoked by any application if it is [`exported` and `enabled`](http://developer.android.com/guide/topics/manifest/activity-element.html). This could allow an attacker to load UI elements in a way the developer may not intend, such as jumping past a password lock screen to access data or functionality. By default Activities are not exported, however, if you define an Intent filter for an Activity it will be exported by the system.
 
 ## Remediation
 
-Don’t assume that activities must be accessed in the order you intended. To prevent this the Activity can check to see if the app is in the “unlocked” state and if not jump back to the lock screen. Regardless of what Intent filters are defined, publicly accessible Activities can be directly invoked with bad data so input validation is important.  Do not put sensitive data into Intents used to start Activities. A malicious program can insert an Intent filter with higher priority and grab the data.
+Activities can ensure proper behavior by checking internal app state to verify they are ready to load. For example, first see if the app is in the "unlocked" state and if not jump back to the lock screen. Regardless of what Intent filters are defined, `exported`/`enabled` Activities can be directly invoked with unsanitized data, so input validation is recommended when operating on data provided by an untrusted source.
 
-Sample Code of passing intent extra ID instead of the whole object. 
+Sample Code of passing intent extra ID instead of the whole object.
 
 ```java
 //bad passing the whole paracable object
@@ -36,14 +36,14 @@ public static Intent getStartingIntent(Context context,
 }
 ```
 
-Avoid intent filters on Activities if they are private, instead use explicit intent. 
+Avoid intent filters on Activities if they are private, instead use explicit intent.
 
-```
+```xml
 <activity
-	  android:name="com.app.YourActivity"
-    android:label="@string/app_name"
-	  android:excludeFromRecents="true"
-	  android:exported="false" >
+	android:name="com.app.YourActivity"
+	android:label="@string/app_name"
+	android:excludeFromRecents="true"
+	android:exported="false" >
 </activity>
 ```
 
@@ -55,4 +55,4 @@ Avoid intent filters on Activities if they are private, instead use explicit int
 ## CWE/OWASP
 
  * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
- * [CWE 927](http://cwe.mitre.org/data/definitions/927.html)
+ * [CWE-927: Use of Implicit Intent for Sensitive Communication](http://cwe.mitre.org/data/definitions/927.html)
