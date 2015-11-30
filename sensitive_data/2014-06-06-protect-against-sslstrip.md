@@ -31,6 +31,6 @@ There are currently a few mitigations available for these types of attacks. HSTS
 ## CWE/OWASP
 
  * [M3- Insufficient Transport Layer Protection](https://www.owasp.org/index.php/Mobile_Top_10_2014-M3)
- * [CWE 757](http://cwe.mitre.org/data/definitions/757.html)
+ * [CWE-757: Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')](http://cwe.mitre.org/data/definitions/757.html)
 
 
