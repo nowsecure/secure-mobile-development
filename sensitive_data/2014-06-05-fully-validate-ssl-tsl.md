@@ -17,7 +17,7 @@ An application not properly validating its connection to the server is susceptib
 
 ## Accepting of self-signed certificates
 
-It is common for developers to disable certificate validation in applications for many purposes.  For example, the developer may not way to test code on the production server, but does not have a domain/certificate for the test environment.  In this case, the developer may add some code to the networking library which allows all certificates to be valid.  By doing this, it allows an attacker to man-in-the-middle the application simply by using a self-signed certificate.  This effectively nullifies the value of TLS.  The only value this would gain you over a plaintext connection is the fact that it requires an active mitm to view/modify traffic.  Where as a plaintext connection can be passively mmonitored.
+It is common for developers to disable certificate validation in applications for many purposes.  For example, the developer may not way to test code on the production server, but does not have a domain/certificate for the test environment.  In this case, the developer may add some code to the networking library which allows all certificates to be valid.  By doing this, it allows an attacker to man-in-the-middle the application simply by using a self-signed certificate.  This effectively nullifies the value of TLS.  The only value this would gain you over a plaintext connection is the fact that it requires an active MITM to view/modify traffic.  Where as a plaintext connection can be passively mmonitored.
 
 ### Vulnerable code:
 An example of the developer mistake would look something like the following on Android:
@@ -53,7 +53,7 @@ An example of the developer mistake would look something like the following on A
 
 ## Allow All Hostname Fail
 
-Another common developer mistake in the implementation of SSL is to set a permissive host name verifier.  In this case the SSL cert is still validated, so it will not accept self signed certificates.  However, if you have a certificate issued for blahblahblah.com from a valid CA installed on the phone, you can use this cert to mitm and sign traffic for any app that "allows all hostnames".
+Another common developer mistake in the implementation of SSL is to set a permissive hostname verifier.  In this case the SSL cert is still validated, so it will not accept self-signed certificates.  However, if you have a certificate issued for blahblahblah.com from a valid CA installed on the phone, you can use this cert to MITM and sign traffic for any app that "allows all hostnames".
 
 An example of the developer mistake would look something like the following on Android:
 
