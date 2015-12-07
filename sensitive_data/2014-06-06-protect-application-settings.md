@@ -13,7 +13,7 @@ order: 210
 
 ## Details 
 
-iOS developers often store application settings in plist files which can be compromised in some situations.  Similarly, Android developers often store settings in a shared preferences XML file or SQLite database, which are not encrypted by default and can be read or even modified with root permissions.
+iOS developers often store application settings in plist files which can be compromised in some situations. Similarly, Android developers often store settings in a shared preferences XML file or SQLite databases, which are not encrypted by default and can be read or even modified with root permissions, or using backup procedures.
 
 ## Remediation
 

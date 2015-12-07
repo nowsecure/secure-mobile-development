@@ -13,7 +13,7 @@ order: 107
 
 ## Details 
 
-On Android calling file.delete() will not securely erase the file and as long as it is not overwritten it can be carved from a physical image of the device. Traditional approaches to overwriting a file generally do not work on mobile devices due to the aggressive management of the NAND Flash memory.
+On Android calling file.delete() will not securely erase the file and as long as it is not overwritten it can be carved from a physical image of the device. Traditional approaches to wipe a file generally do not work on mobile devices due to the aggressive management of the NAND Flash memory.
 
 ## Remediation
 
@@ -22,6 +22,8 @@ A developer should assume that any data written to a device can be recovered. In
 In addition, while not advisable for most applications, it may be possible to delete a file and then overwrite all available space (create a large file), which would force the NAND Flash to erase all unallocated space. The drawbacks to this technique include wearing out the NAND Flash, causing the app and the entire device to respond slowly, and significant power consumption.
 
 Ideally avoid storing sensitive information on the device where possible. See [BPXX Avoid storing sensitive data].
+
+Encrypting the sensitive data stored in files and rewriting the contents of the file and syncing before deleting can be useful in some situations, but, as described above, are not fully reliable solutions to the problem.
 
 ## References 
 
