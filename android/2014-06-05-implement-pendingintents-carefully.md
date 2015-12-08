@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Implement PendingIntents Carefully"
-description: "PendingIntents allow apps to pass execution to another app which can then call the Intent specified as though they were the originating app."
+description: "A PendingIntent allows an app to pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions)."
 published: 1
 categories:
   - android
@@ -13,11 +13,11 @@ order: 605
 
 ## Details 
 
-PendingIntents allow apps to pass execution to another app which can then call the Intent specified as though they were the originating app. This allows external apps to call back to private components.  The external app, if malicious, may try to influence the destination and or data/integrity.
+With a PendingIntent, an app can pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions). This allows other apps to call back to the originating app's private components.  The external app, if malicious, may try to influence the destination and/or data/integrity.
 
 ## Remediation
 
-It is best to use PendingIntents as delayed callbacks to private Broadcast Receivers/Activities and explicitly specify the component name as one of your components in the base Intent.
+Use PendingIntents as delayed callbacks to private BroadcastReceivers or broadcast activities, and explicitly specify the component name in the base Intent.
 
 ## References 
 
@@ -26,4 +26,4 @@ It is best to use PendingIntents as delayed callbacks to private Broadcast Recei
 ## CWE/OWASP
 
  * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
- * [CWE 927](http://cwe.mitre.org/data/definitions/927.html)
+ * [CWE-927: Use of Implicit Intent for Sensitive Communication](http://cwe.mitre.org/data/definitions/927.html)

@@ -1,6 +1,6 @@
 ---
 title: "Avoid GUI Objects Caching"
-description: "Remote check deposit apps allow the user to take a picture of a check using the phone’s camera and send it off to the financial institution to deposit in an account."
+description: "Remote check-deposit apps allow people to take a picture of a check with their device and send it to their financial institution for deposit into an account.."
 layout: guide
 published: 1
 categories:
@@ -14,19 +14,19 @@ order: 611
 
 ## Details 
 
-On Android, application screens are retained in memory and entire applications can be retained in memory because of multitasking. An attacker who finds or steals a device is able to navigate directly to previously used screens that are still retained and see any data still shown on the GUI. An example of this would be a banking application where a user views their transaction history and then “logs out” of the application. By launching the transaction view activity directly the attacker can see the previous transactions that were displayed.
+Android retains application screens in memory, and multitasking can result in the retention of an entire application in memory (even if the user logs out of their account). This allows an attacker that finds or steals a device to navigate directly to retained screens, which may include sensitive user data as part of the GUI. For example, if a user logs-out of a banking app but doesn't quit or close the app, a screen displaying transaction activity may be retained and viewable to an attacker.
 
 ## Remediation
 
 To counter this, a developer has three common options:
 
-1. Quit the app entirely when the user logs out. It is against Android design principles to quit your own app but it is more secure as the GUI gets destroyed/recycled.
+1. Quit the app entirely when the user logs out. While it's against Android design principles to quit your own app, it's far more secure because quitting the app will destroy any retained GUI screens.
 
-2. Perform a test at the start of each Activity/screen to check if the user is in a logged in state, if not, switch to the login screen.
+2. Any time an activity is initiated or a screen is accessed, execute a check to determine whether the user is in a logged-in state. If the user is not logged in, present the log-in screen.
 
 3. Nullify the data on a GUI screen before leaving the screen or logging out.
 
 ## CWE/OWASP
 
  * [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
- * [CWE 200](http://cwe.mitre.org/data/definitions/200.html)
+ * [CWE 200: Information Exposure](http://cwe.mitre.org/data/definitions/200.html)
