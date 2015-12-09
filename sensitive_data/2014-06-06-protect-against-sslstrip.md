@@ -1,7 +1,7 @@
 ---
 layout: guide
-title: "Protect Against SSL Strip"
-description: "This MITM attack is difficult to prevent on mobile web apps."
+title: "Protect Against SSL Downgrade attacks"
+description: "An attacker can transparently swap https sites for their http equivalents, effectively bypassing TLS"
 published: 1
 categories:
   - handling-sensitive-data
@@ -9,23 +9,28 @@ series:
   name: Handling Sensitive Data
   index: 37
 order: 204
---- 
+---
 
-## Details 
+## Details
 
-This MITM attack is difficult to prevent on mobile web apps. It transparently hijacks HTTP traffic on a network, monitors for HTTPS requests and then eliminates the SSL leaving the client on an unsecured connection.
+An attacker can transparently swap https sites for their http equivalents, effectively bypassing TLS. As an example, if you vist or type http://google.com, by default you will be redirected to secure, TLS version of the site. An example of this would be a banking webpage serving the landing page in plaintext, only POSTING the login over TLS.  An attacker could rewrite the landing to capture the credentials prior to sending them off to the original endpoint or just redirecting traffic to a attacker controlled server, proxying all traffic.
 
 ## Remediation
 
-SSLStrip is a difficult attack to prevent in a web app, but there are several steps which can be taken to mitigate this risk. First, if possible eliminate all HTTP traffic for your secured application. This will not eliminate the risk but help set the proper foundation.
+All traffic, even non-sensitive traffic, should be served over TLS. This prevents any possible downgrade / stripping attacks as you need an initial plaintext 'entrypoint' to accomplish said attack.
 
-Second, have the client validate that SSL is active. This is straightforward in fully native apps. In mobile web apps, this can be achieved through JavaScript and if an HTTPS connection is not detected, the client can redirect to HTTPS.
+Avoid icons/language that assures user of secure connection but which does not depend on validated HTTPS session. User education is an important component in reducing the risk of SSLStrip attacks. Reinforce the importance of HTTPS on all network traffic.
 
-A more reliable means of requiring SSL has been designed – the Strict Transport Security HTTP Header. This header causes the browser to require HTTPS for a site once the header has been received. However, browsers are just beginning to implement the Strict Transport Security HTTP Header, and mobile browser support is lagging.
+There are currently a few mitigations available for these types of attacks. HSTS (HTTP Strict Transport Security), which requires browser support, is a header included in the response which makes all subsequnt connections that domain use TLS and the certificate that it saw originally. Another mitigation which has been recently put in place on both Android and iOS is to treat non-TLS/plaintext traffic as a developer error.  Android recently added [android:usesCleartextTraffic](https://koz.io/android-m-and-the-war-on-cleartext-traffic/) and iOS 9 and above requires that you manually add exceptions for plaintext traffic.  Further in the future, HTTP/2 is a replacement web protocol that is TLS only, among other features.
 
-Avoid icons/language that assures user of secure connection but which does not depend on validated HTTPS session. Finally, user education is an important component in reducing the risk of SSLStrip attacks. Reinforce the importance of HTTPS on all user-facing documentation, communication, training, etc.
- 
+
+## References
+
+* [SSLStrip](http://www.thoughtcrime.org/software/sslstrip/)
+
 ## CWE/OWASP
 
  * [M3- Insufficient Transport Layer Protection](https://www.owasp.org/index.php/Mobile_Top_10_2014-M3)
- * [CWE 757](http://cwe.mitre.org/data/definitions/79.html)
+ * [CWE-757: Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')](http://cwe.mitre.org/data/definitions/757.html)
+
+
