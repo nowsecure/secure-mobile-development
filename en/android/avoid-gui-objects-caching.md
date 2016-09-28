@@ -1,16 +1,6 @@
----
-title: "Avoid GUI Objects Caching"
-description: "Remote check-deposit apps allow people to take a picture of a check with their device and send it to their financial institution for deposit into an account.."
-layout: guide
-published: 1
-categories:
- - android
-section: Android
-series:
-  name: Android
-  index: 1
-order: 611
---- 
+# Avoid GUI Objects Caching
+
+Remote check-deposit apps allow people to take a picture of a check with their device and send it to their financial institution for deposit into an account.
 
 ## Details 
 

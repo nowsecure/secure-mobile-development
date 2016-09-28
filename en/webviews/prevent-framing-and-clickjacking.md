@@ -1,19 +1,9 @@
----
-layout: guide
-title: "Prevent Framing and Clickjacking"
-description: "Framing involves delivery of a Web/WAP site within an iFrame."
-published: 1
-categories:
-  - webviews
-series:
-  name: Webviews
-  index: 41
-order: 401
---- 
+# Prevent Framing and Clickjacking
 
 ## Details 
 
 Framing involves delivery of a Web/WAP site within an iFrame. This attack can enable the “wrapper” site to execute a clickjacking attack. Clickjacking is a very real threat that has been exploited on high-profile services (e.g., Facebook) to steal information or redirect users to attacker controlled sites.
+
 The primary purpose for framing is to trick users into clicking on something different that what they intended. The goal is to gather confidential information or take control of the affected computer through chained vulnerabilities like Cross Site Scripting. This attack commonly takes the form of a script that is embedded within the source code, which is executed without the user’s knowledge.  It can be triggered when users click a button that appears to perform other function.
 
 ## Remediation

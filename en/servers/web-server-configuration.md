@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Implement Proper Web Server Configuration"
-description: "Certain settings on a web server can increase security."
-published: 1
-categories:
-  - servers
-series:
-  name: servers
-  index: 42
-order: 701
---- 
+# Implement Proper Web Server Configuration
 
 ## Details 
 

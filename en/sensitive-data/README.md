@@ -1,0 +1,14 @@
+## Handling Sensitive Data
+
+* [Implement Secure Data Storage](implement-secure-data-storage.md)
+* [Use SECURE Setting For Cookies](use-secure-setting-for-cookies.md)
+* [Fully validate SSL/TLS](fully-validate-ssl-tls.md)
+* [Protect Against SSL Strip](protect-against-sslstrip.md)
+* [Limit Use of UUID](limit-use-of-uuid.md)
+* [Treat Geolocation Data Carefully](treat-geolocation-data-carefully.md)
+* [Institute Local Session Timeout](institute-local-session-timeout.md)
+* [Implement Enhanced/Two-Factor Authentication](implement-enhanced-two-factor-authentication.md)
+* [Protect Application Settings](protect-application-settings)
+* [Hide Account Numbers and Use Tokens](hide-account-numbers-and-use-tokens.md)
+* [Implement Secure Network Transmission Of Sensitive Data](implement-secure-network-transmission-of-sensitive-data.md)
+* [Validate Input From Client](validate-input-from-client.md)

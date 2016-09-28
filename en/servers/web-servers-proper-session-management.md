@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Use Proper Session Management"
-description: "Sessions for users are maintained on most apps via a cookie, which can be vulnerable."
-published: 1
-categories:
-  - servers
-series:
-  name: servers
-  index: 40
-order: 703
---- 
+# Use Proper Session Management
 
 ## Details 
 

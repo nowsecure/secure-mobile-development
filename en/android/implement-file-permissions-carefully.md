@@ -1,12 +1,4 @@
----
-title: "Implement File Permissions Carefully"
-description: "Test"
-layout: guide
-published: 1
-categories: 
- - android
-order: 601
----
+# Implement File Permissions Carefully
 
 ## Details
 

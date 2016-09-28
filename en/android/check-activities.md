@@ -1,12 +1,6 @@
----
-title: "Check Activities"
-description: "Typically in Android applications an Activity is a 'Screen' in an app."
-layout: guide
-published: 1
-categories:
-  - android
-order: 603
----
+# Check Activities
+
+Typically in Android applications an Activity is a 'Screen' in an app.
 
 ## Details
 

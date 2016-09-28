@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Implement Content Providers Carefully"
-description: "Content providers are a standard way for apps to share data using a URI-addressing scheme and relational database model."
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 5
-order: 608
---- 
+# Implement Content Providers Carefully
 
 ## Details 
 

@@ -1,11 +1,4 @@
----
-layout: guide
-title: "Mobile Security Primer"
-published: 1
-categories:
-  - primer
-order: 001
---- 
+# Mobile Security Primer
 
 Mobile security entails many of the challenges of Web security – a wide audience, rapid development, and continuous network connectivity – combined with the risks common to more traditional fat client applications such as buffer management, local encryption, and malware. One of the unique features to the mobile environment is the prevalence of installed applications coming from unknown developers who should be considered “untrusted.”
 

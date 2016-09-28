@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Sign Android APKs"
-description: "APKs should be signed correctly with a non-expired certificate."
-published: 1
-categories:
-  - android	
-series:
-  name: Android
-  index: 12
-order: 612
---- 
+# Sign Android APKs
 
 ## Details 
 

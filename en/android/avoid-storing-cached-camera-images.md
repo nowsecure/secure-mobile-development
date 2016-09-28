@@ -1,15 +1,6 @@
----
-layout: guide
-title: "Avoid Storing Cached Camera Images"
-description: "Remote-check-deposit apps allow a person to take a picture of a check with their mobile phone's camera and then send the image to their financial institution for deposit into their account."
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 3
-order: 610
---- 
+# Avoid Storing Cached Camera Images
+
+Remote-check-deposit apps allow a person to take a picture of a check with their mobile phone's camera and then send the image to their financial institution for deposit into their account.
 
 ## Details 
 

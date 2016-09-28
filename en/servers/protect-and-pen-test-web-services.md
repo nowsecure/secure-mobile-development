@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Protect and Pen Test Web services"
-description: "A compromised server has the potential to intercept user credentials and launch other attacks against app users."
-published: 1
-categories:
-  - servers	
-series:
-  name: Servers
-  index: 45
-order: 704
---- 
+# Protect and Pen Test Web Services
 
 ## Details 
 

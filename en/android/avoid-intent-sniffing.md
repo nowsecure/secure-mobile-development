@@ -1,15 +1,6 @@
----
-title: "Avoid Intent Sniffing"
-description: "When an activity is initiated by another application using a broadcast intent, the data passed in the intent can be read by a malicious app."
-layout: guide
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 2
-order: 607
---- 
+# Avoid Intent Sniffing
+
+When an activity is initiated by another application using a broadcast intent, the data passed in the intent can be read by a malicious app.
 
 ## Details 
 

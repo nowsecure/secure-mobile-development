@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Use Broadcasts Carefully"
-description: "If no permission is set when sending a broadcast Intent, then any unprivileged app can receive the Intent unless it has an explicit destination."
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 10
-order: 604
---- 
+# Use Broadcasts Carefully
 
 ## Details 
 

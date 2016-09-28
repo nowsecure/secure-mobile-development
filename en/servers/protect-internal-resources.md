@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Protect Internal Resources"
-description: "Resources for internal use such as administrator login forms frequently leverage authentication that is not resistant to brute force."
-published: 1
-categories:
-  - servers	
-series:
-  name: Servers
-  index: 46
-order: 705
---- 
+# Protect Internal Resources
 
 ## Details 
 

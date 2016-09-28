@@ -1,15 +1,6 @@
----
-layout: guide
-title: "Implement PendingIntents Carefully"
-description: "A PendingIntent allows an app to pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions)."
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 7
-order: 605
---- 
+# Implement PendingIntents Carefully
+
+A PendingIntent allows an app to pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions).
 
 ## Details 
 

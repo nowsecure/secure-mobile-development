@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Use Automatic Reference Counting (ARC)"
-description: "Automatic Reference Counting is a memory management system that handles the reference count of objects automatically at compile time, instead of leaving this task to the developer."
-published: 1
-categories:
-  - ios	
-series:
-  name: iOS
-  index: 48
-order: 503
---- 
+# Use Automatic Reference Counting (ARC)
 
 ## Details 
 

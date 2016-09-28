@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Use the Keychain carefully"
-description: "iOS provides the keychain for secure data storage. However, in several scenarios, the keychain can be compromised and subsequently decrypted."
-published: 1
-categories:
-  - ios
-series:
-  name: iOS
-  index: 30
-order: 501
---- 
+# Use the Keychain Carefully
 
 ## Details 
 

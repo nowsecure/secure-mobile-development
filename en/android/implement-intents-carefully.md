@@ -1,12 +1,4 @@
----
-title: "Implement intents carefully"
-description: "Intents are used for inter-component signalling and can be used"
-layout: guide
-published: 1
-categories:
-  - android
-order: 602
----
+# Implement Intents Carefully
 
 ## Details 
 

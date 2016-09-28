@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Protect against CSRF with form tokens"
-description: "CSRF (Cross-site Request Forgery) relies on known or predictable form values and a logged-in browser session."
-published: 1
-categories:
-  - webviews	
-series:
-  name: Webviews
-  index: 44
-order: 402
---- 
+# Protect Against CSRF with Form Tokens
 
 ## Details 
 

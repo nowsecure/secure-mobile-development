@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Protect Application Services"
-description: "Services are typically used for background processing."
-published: 1
-categories:
-  - android
-series:
-  name: Android
-  index: 9
-order: 606
---- 
+# Protect Application Services
 
 ## Details 
 

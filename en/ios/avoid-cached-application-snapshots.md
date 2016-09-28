@@ -1,16 +1,4 @@
----
-layout: guide
-title: "Avoid Cached Application Snapshots"
-description: "In order to provide the visual transitions in the interface, iOS has been proven to capture and store snapshots (screenshots or captures) as images stored in the file system portion of the device NAND flash. This occurs when an application suspends (rather than terminates), when either the home button is pressed, or a phone call or other event temporarily suspends the application. These images can often contain user and application data. In one published case, they contained the user’s full name, DOB, address, employer, and credit scores."
-published: 1
-categories:
-  - ios
-series:
-  name: iOS
-  index: 18
-order: 502
---- 
-
+# Avoid Cached Application Snapshots
 
 ## Details 
 

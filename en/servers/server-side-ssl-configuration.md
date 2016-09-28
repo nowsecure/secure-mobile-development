@@ -1,15 +1,4 @@
----
-layout: guide
-title: "Properly Configure Server-side SSL"
-description: "Many web servers allow lower encryption settings, such as the very weak export-grade 40-bit encryption."
-published: 1
-categories:
-  - servers
-series:
-  name: Servers
-  index: 43
-order: 702
---- 
+# Properly Configure Server-side SSL
 
 ## Details 
 
