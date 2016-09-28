@@ -1,0 +1,14 @@
+{
+    "gitbook": "2.x.x",
+    "plugins": [],
+    "title": "Secure Mobile Development Best Practices | NowSecure",
+    "links": {
+        "sidebar": {
+            "NowSecure": "https://www.nowsecure.com/"
+        }
+    },
+    "styles": {
+        "website": "styles/website.css",
+        "pdf": "styles/pdf.css"
+    }
+}

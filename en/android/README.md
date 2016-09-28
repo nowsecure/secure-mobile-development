@@ -1,0 +1,13 @@
+## Android
+* [Implement File Permissions Carefully](android/implement-file-permissions-carefully.md)
+* [Implement Intents Carefully](android/implement-intents-carefully.md)
+* [Check Activities](android/check-activities.md)
+* [Use Broadcasts Carefully](android/use-broadcasts-carefully.md)
+* [Implement PendingIntents Carefully](android/implement-pendingintents-carefully.md)
+* [Protect Application Services](android/protect-application-services.md)
+* [Avoid Intent Sniffing](android/avoid-intent-sniffing.md)
+* [Implement Content Providers Carefully](android/implement-content-providers-carefully.md)
+* [Follow WebView Best Practices](android/webview-best-practices.md)
+* [Avoid Storing Cached Camera Images](android/avoid-storing-cached-camera-images.md)
+* [Avoid GUI Objects Caching](android/avoid-gui-objects-caching.md)
+* [Sign Android APKs](android/android-apk-signing.md)
