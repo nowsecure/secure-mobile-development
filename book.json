@@ -1,14 +1,23 @@
 {
-    "gitbook": "2.x.x",
-    "plugins": [],
-    "title": "Secure Mobile Development Best Practices | NowSecure",
-    "links": {
-        "sidebar": {
-            "NowSecure": "https://www.nowsecure.com/"
-        }
+  "gitbook": "2.x.x",
+  "plugins": ["edit-link", "ga"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/nowsecure/secure-mobile-development/tree/master",
+      "label": "Edit This Page"
     },
-    "styles": {
-        "website": "styles/website.css",
-        "pdf": "styles/pdf.css"
+    "ga": {
+      "token": "UA-4968988-13"
     }
+  },
+  "title": "Secure Mobile Development Best Practices | NowSecure",
+  "links": {
+    "sidebar": {
+      "NowSecure": "https://www.nowsecure.com/"
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "pdf": "styles/pdf.css"
+  }
 }
