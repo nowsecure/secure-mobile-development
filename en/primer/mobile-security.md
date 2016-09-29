@@ -2,7 +2,7 @@
 
 Mobile security entails many of the challenges of Web security – a wide audience, rapid development, and continuous network connectivity – combined with the risks common to more traditional fat client applications such as buffer management, local encryption, and malware. One of the unique features to the mobile environment is the prevalence of installed applications coming from unknown developers who should be considered “untrusted.”
 
-## Anatomy of a Mobile Attack
+## The Mobile Attack Surface
 
 As illustrated below, a mobile attack can involve the device layer, the network layer, the data center, or a combination of these. Inherent platform vulnerabilities and social engineering continue to pose major opportunities for cyber thieves and thus significant challenges for those looking protect user data. 
 
