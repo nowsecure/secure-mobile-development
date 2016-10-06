@@ -1,6 +1,6 @@
 {
   "gitbook": "2.x.x",
-  "plugins": ["edit-link", "ga"],
+  "plugins": ["edit-link", "ga", "links"],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/nowsecure/secure-mobile-development/tree/master",
@@ -8,6 +8,15 @@
     },
     "ga": {
       "token": "UA-4968988-13"
+    },
+    "links": { 
+      "links": [
+        {
+            "label": "Read PDF",
+            "icon": "fa fa-file-pdf-o",
+            "url": "https://info.nowsecure.com/Secure-Mobile-Dev.html"
+        }
+      ]
     }
   },
   "title": "Secure Mobile Development Best Practices | NowSecure",
