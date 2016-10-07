@@ -13,7 +13,7 @@
   * [Implement Secure Data Storage](sensitive-data/implement-secure-data-storage.md)
   * [Use SECURE Setting For Cookies](sensitive-data/use-secure-setting-for-cookies.md)
   * [Fully validate SSL/TLS](sensitive-data/fully-validate-ssl-tls.md)
-  * [Protect Against SSL Strip](sensitive-data/protect-against-sslstrip.md)
+  * [Protect Against SSL Downgrade Attacks](sensitive-data/protect-against-sslstrip.md)
   * [Limit Use of UUID](sensitive-data/limit-use-of-uuid.md)
   * [Treat Geolocation Data Carefully](sensitive-data/treat-geolocation-data-carefully.md)
   * [Institute Local Session Timeout](sensitive-data/institute-local-session-timeout.md)
