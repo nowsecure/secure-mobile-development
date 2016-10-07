@@ -22,6 +22,7 @@
   * [Hide Account Numbers and Use Tokens](sensitive-data/hide-account-numbers-and-use-tokens.md)
   * [Implement Secure Network Transmission Of Sensitive Data](sensitive-data/implement-secure-network-transmission-of-sensitive-data.md)
   * [Validate Input From Client](sensitive-data/validate-input-from-client.md)
+  * [Avoid Storing App Data in Backups](sensitive-date/avoid-storing-app-data-in-backups.md)
 * [Caching and Logging](caching-logging/README.md)
   * [Avoid Caching App Data](caching-logging/avoid-caching-app-data.md)
   * [Avoid Crash Logs](caching-logging/avoid-crash-logs.md)
