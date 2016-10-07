@@ -12,3 +12,4 @@
 * [Hide Account Numbers and Use Tokens](hide-account-numbers-and-use-tokens.md)
 * [Implement Secure Network Transmission Of Sensitive Data](implement-secure-network-transmission-of-sensitive-data.md)
 * [Validate Input From Client](validate-input-from-client.md)
+* [Avoid Storing App Data in Backups](avoid-storing-app-data-in-backups.md)

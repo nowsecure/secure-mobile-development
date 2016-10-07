@@ -7,8 +7,9 @@ Storing data securely on a mobile device requires proper technique. Whenever pos
 ## Remediation
 
 Do not store sensitive data where possible. Options to reduce the storage of user information include:
- * Transmit and display but do not persist to memory. This requires special attention as well, to ensure that an analog leak does not present itself where screenshots of the data are written to disk.
- * Store only in RAM (clear at application close).
+
+* Transmit and display but do not persist to memory. This requires special attention as well, to ensure that an analog leak does not present itself where screenshots of the data are written to disk.
+* Store only in RAM (clear at application close).
 
 ### Additional Layered Encryption
 If storing sensitive data on the device is an application requirement, you should add an additional layer of verified, third-party encryption (e.g., [SQLCipher](https://www.zetetic.net/sqlcipher/)) to the data as device encryption is not sufficient.
@@ -16,6 +17,7 @@ If storing sensitive data on the device is an application requirement, you shoul
 By adding another layer of encryption, you have more control over the implementation and attacks focused on the main OS encryption classes. For example, attacks on iOS data-protection classes (which are now compromised) will not succeed in compromising your application directly. This approach has the drawback of being more complex and, if implemented poorly, can actually reduce security posture. If you are not confident in including a verified third-party crypto library Apple and Android’s common cryptographic libraries provide a number of standard cryptographic functions which, if used properly, can provide a reasonably secure cryptography implementation.
 
 Some options include:
+
  * Encrypting sensitive values in an SQLite database using SQLCipher, which encrypts the entire database using a [PRAGMA key](https://www.zetetic.net/sqlcipher/sqlcipher-api/#key)
  * The PRAGMA key can be generated at runtime when the user initially installs the app or launches it for the first time
  * Generate a unique PRAGMA key for each user and device
