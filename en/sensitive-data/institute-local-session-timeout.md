@@ -8,7 +8,7 @@ Mobile devices are frequently lost or stolen, and an attacker can take advantage
 
 Any time the app is not used for more than 5 minutes, terminate the active session, redirect the user to the log-in screen, ensure that no app data is visible, and require the user to re-enter log-in credentials to access the app.
 
-After timeout, also discard and clear all memory associated with user data including any master keys use to decrypt that date (see also best practice 2.5 [Securely Store Sensitive Data in RAM](/coding-practices/securely-store-sensitive-data-in-ram.md))
+After timeout, also discard and clear all memory associated with user data including any master keys use to decrypt that date (see also best practice 2.5 [Securely Store Sensitive Data in RAM](../coding-practices/securely-store-sensitive-data-in-ram.md))
 
 Also, make sure the session timeout occurs on both the client side and the server side to mitigate against an attacker modifying the local timeout mechanism. 
 

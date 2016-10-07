@@ -12,7 +12,7 @@ By default, the `allowBackup` flag within an Android app’s Manifest file is se
 
 ### iOS
 
-In performing an iTunes backup of a device on which a particular app has been installed, the backup will include all subdirectories (except the “Caches” subdirectory) and files contained within that app’s private directory on the device’s file system. Therefore, avoid storing any sensitive data in plaintext within any of the files or folders within the app’s private directory or subdirectories (see also best practice 3.1 [Implement Secure Data Storage](sensitive-data/implement-secure-data-storage.md).
+In performing an iTunes backup of a device on which a particular app has been installed, the backup will include all subdirectories (except the “Caches” subdirectory) and files contained within that app’s private directory on the device’s file system. Therefore, avoid storing any sensitive data in plaintext within any of the files or folders within the app’s private directory or subdirectories (see also best practice 3.1 [Implement Secure Data Storage](implement-secure-data-storage.md).
 
 ## CWE/OWASP 
 
