@@ -11,7 +11,7 @@ Implementing ATS includes a couple of options:
 
 ## Remediation
 
-For apps running on iOS 9.0 or higher, best practice is to enable ATS globally by linking to the iOS 9.0 or later SDK and *NOT* setting the `NSAllowsArbitraryLoads` key to `Yes` or `True`.  Apple currently allows developers to include exceptions for any domains for which TLS cannot be enforced. Exceptions can be made using the `NSExceptionAllowsInsecureHTTPLoads` or `NSThirdPartyExceptionAllowsInsecureHTTPLoads` keys. It is important to note that beginning in January 2017, Apple will require appropriate justification from developers for any exceptions declared inside the application (During App Store review). Otherwise, all communications must use ATS.
+For apps running on iOS 9.0 or higher, best practice is to enable ATS globally by linking to the iOS 9.0 or later SDK and *NOT* setting the `NSAllowsArbitraryLoads` key to `Yes` or `True`.  Apple currently allows developers to include exceptions for any domains for which TLS cannot be enforced. Exceptions can be made using the `NSExceptionAllowsInsecureHTTPLoads` or `NSThirdPartyExceptionAllowsInsecureHTTPLoads` keys. It is important to note that beginning in January 2017, Apple will require appropriate justification from developers for any exceptions declared inside the application (during App Store review). Otherwise, all communications must use ATS.
 
 ## References
 
