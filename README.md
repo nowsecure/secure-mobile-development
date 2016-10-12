@@ -14,9 +14,9 @@ To learn about all the vectors that attackers might use on your app, read our [M
 
 We categorize our Secure Mobile Development Best Practices under eight topics. You can find a complete table of contents [here](en/SUMMARY.md)
 
-* [Coding Practices](en/coding_practices/README.md)
-* [Handling Sensitive Data](en/sensitive_data/README.md)
-* [Caching and Logging](en/caching_logging/README.md)
+* [Coding Practices](en/coding-practices/README.md)
+* [Handling Sensitive Data](en/sensitive-data/README.md)
+* [Caching and Logging](en/caching-logging/README.md)
 * [Webviews](en/webviews/README.md)
 * [iOS](en/ios/README.md)
 * [Android](en/android/README.md)
