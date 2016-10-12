@@ -8,19 +8,19 @@ This guide gives specific recommendations to use during your development process
 
 We revise our best practices periodically and invite [contributions](https://github.com/nowsecure/secure-mobile-development/pulls), and the updated guide is published [here](https://books.nowsecure.com/secure-mobile-development/) as changes are accepted into the main repository.
 
-To learn about all the vectors that attackers might use on your app, read our [Mobile Security Primer](mobile-security-primer/README.md).
+To learn about all the vectors that attackers might use on your app, read our [Mobile Security Primer](en/primer/mobile-security.md).
 
 ### Categories
 
-We categorize our Secure Mobile Development Best Practices under eight topics. You can find a complete table of contents [here](SUMMARY.md)
+We categorize our Secure Mobile Development Best Practices under eight topics. You can find a complete table of contents [here](en/SUMMARY.md)
 
-* [Coding Practices](coding_practices/README.md)
-* [Handling Sensitive Data](sensitive_data/README.md)
-* [Caching and Logging](caching_logging/README.md)
-* [Webviews](webviews/README.md)
-* [iOS](ios/README.md)
-* [Android](android/README.md)
-* [Servers](servers/README.md)
+* [Coding Practices](en/coding_practices/README.md)
+* [Handling Sensitive Data](en/sensitive_data/README.md)
+* [Caching and Logging](en/caching_logging/README.md)
+* [Webviews](en/webviews/README.md)
+* [iOS](en/ios/README.md)
+* [Android](en/android/README.md)
+* [Servers](en/servers/README.md)
 
 ### Technology Stack
 
