@@ -70,7 +70,6 @@ If certificate pinning cannot be implemented for any app functionality that hand
 2. **Hostname validation:** The app must check and verify that the hostname (Common Name or CN) extracted from the certificate matches that of the host with which the app intends to communicate.
 
 ### For Android
-For Android
 
 Pinning certificates to a default Apache HTTP client shipped with Android consists of obtaining a certificate for the desired host, transforming the cert in .bks format, then pinning the cert to an instance of `DefaultHttpClient`. BKS keystores are usually included within the assets/raw directory of the app’s APK file.
 
@@ -95,8 +94,12 @@ The following sample code illustrates this approach:
 
 For more information on implementing certificate pinning in Android, refer to the OWASP [Certificate and Public Key Pinning guide](https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android) -  https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android.
 
+In addition, [CWAC-NetSecurity](https://github.com/commonsguy/cwac-netsecurity) is a library that backports the Android 7.0 network security configuration subsystem going back to API level 17 (Android 4.2), which makes it easier to tie an app to particular certificate authorities or certificates, support self-signed certificates, and handle other advanced SSL certificate scenarios.
+
 ### For iOS
 One option is to use `NSURLSession` or `AFNetworking` classes to achieve certificate pinning in iOS. Additional details on this implementation can be found in the technical note “[HTTPS Server Trust Evaluation](https://developer.apple.com/library/ios/technotes/tn2232/_index.html)” at https://developer.apple.com/library/ios/technotes/tn2232/_index.html.
+
+In addition, [TrustKit](https://github.com/datatheorem/TrustKit), an open-source framework, can help make it easier for developers to deploy public key-pinning in iOS.
 
 
 ## References
