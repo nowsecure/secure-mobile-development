@@ -6,7 +6,7 @@ Many web servers allow lower encryption settings, such as the very weak, export-
 
 ## Remediation
 
-Ensure SSL certificates are properly installed and configured for the highest encryption possible. If possible, enable only strong ciphers (128-bit and up) and SSLv3/TLSv1.
+Ensure SSL certificates are properly installed and configured for the highest encryption possible. If possible, enable only strong ciphers (128-bit and up).
 
 TLSv1 is more than 10 years old and was found vulnerable to a “renegotiation attack” in 2009.
 
