@@ -1,6 +1,6 @@
 # Increase Code Complexity and Use Obfuscation
 
-## Details 
+## Details
 
 Reverse engineering apps can provide valuable insight into how your app works. Making your app more complex internally makes it more difficult for attackers to see how the app operates, which can reduce the number of attack vectors.
 
@@ -31,11 +31,10 @@ The binaries in iOS applications distributed in the App Store are encrypted, add
  * Bugging Debuggers on iOS [https://www.theiphonewiki.com/wiki/Bugging_Debuggers]()
  * LLVM-Obfuscator [https://github.com/obfuscator-llvm/obfuscator/wiki]() (for iOS and Android)
  * [http://developer.android.com/guide/publishing/licensing.html#app-obfuscation](http://developer.android.com/guide/publishing/licensing.html#app-obfuscation)
- * Android - ProGuard: [http://proguard.sourceforge.net/](http://proguard.sourceforge.net/) - 
-	[http://developer.android.com/tools/help/proguard.html](http://developer.android.com/tools/help/proguard.html) 
+ * Android - ProGuard: [http://proguard.sourceforge.net/](http://proguard.sourceforge.net/) - [http://developer.android.com/tools/help/proguard.html](http://developer.android.com/tools/help/proguard.html)
  * Android - DexGuard: [http://www.saikoa.com/dexguard](http://www.saikoa.com/dexguard)
 
-## CWE/OWASP 
+## CWE/OWASP
 
  * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
  * [CWE-656: Reliance on Security Through Obscurity](http://cwe.mitre.org/data/definitions/656.html)
