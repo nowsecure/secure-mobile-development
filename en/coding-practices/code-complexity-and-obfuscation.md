@@ -25,14 +25,13 @@ If the application handles highly sensitive data, consider implementing anti-deb
 The binaries in iOS applications distributed in the App Store are encrypted, adding another layer of complexity. While tools exist to strip the FairPlay digital rights management (DRM) encryption from these binaries, this layer of DRM increases the amount of time and proficiency level required to attack the binary. The encryption used in the App Store application can, however, be stripped by a skilled attacker. The attacker achieves this by dumping the memory from which an application is loaded directly from a device’s memory when it's run.
 
 ## References
- * ObjC-Obfuscator [https://github.com/FutureWorkshops/Objc-Obfuscator]()
- * iOS-Class-Guard [https://github.com/Polidea/ios-class-guard]()
- * FairPlay DRM overview on iOS [https://www.theiphonewiki.com/wiki/Copy_Protection_Overview]()
- * Bugging Debuggers on iOS [https://www.theiphonewiki.com/wiki/Bugging_Debuggers]()
- * LLVM-Obfuscator [https://github.com/obfuscator-llvm/obfuscator/wiki]() (for iOS and Android)
- * [http://developer.android.com/guide/publishing/licensing.html#app-obfuscation](http://developer.android.com/guide/publishing/licensing.html#app-obfuscation)
- * Android - ProGuard: [http://proguard.sourceforge.net/](http://proguard.sourceforge.net/) - [http://developer.android.com/tools/help/proguard.html](http://developer.android.com/tools/help/proguard.html)
- * Android - DexGuard: [http://www.saikoa.com/dexguard](http://www.saikoa.com/dexguard)
+ * ObjC-Obfuscator <https://github.com/FutureWorkshops/Objc-Obfuscator>
+ * iOS-Class-Guard <https://github.com/Polidea/ios-class-guard>
+ * FairPlay DRM overview on iOS <https://www.theiphonewiki.com/wiki/Copy_Protection_Overview>
+ * Bugging Debuggers on iOS <https://www.theiphonewiki.com/wiki/Bugging_Debuggers>
+ * LLVM-Obfuscator <https://github.com/obfuscator-llvm/obfuscator/wiki> (for iOS and Android)
+ * Android - ProGuard: <http://proguard.sourceforge.net/> - <http://developer.android.com/tools/help/proguard.html>
+ * Android - DexGuard: <http://www.saikoa.com/dexguard>
 
 ## CWE/OWASP
 
