@@ -31,13 +31,14 @@ The binaries in iOS applications distributed in the App Store are encrypted, add
  * [DexGuard](http://www.saikoa.com/dexguard)
 
 ### iOS
+ * [PreEmptive Protection for iOS - Rename](https://github.com/preemptive/PPiOS-Rename)
  * [ObjC-Obfuscator](https://github.com/FutureWorkshops/Objc-Obfuscator)
- * [iOS-Class-Guard](https://github.com/Polidea/ios-class-guard)
  * [FairPlay DRM overview](https://www.theiphonewiki.com/wiki/Copy_Protection_Overview)
  * [Bugging Debuggers](https://www.theiphonewiki.com/wiki/Bugging_Debuggers)
 
-### Both
- * [LLVM-Obfuscator](https://github.com/obfuscator-llvm/obfuscator/wiki)
+### Other / Multi
+ * [LLVM-Obfuscator](https://github.com/obfuscator-llvm/obfuscator/wiki) (iOS, Android, others)
+ * [Dotfuscator Community Edition](https://www.preemptive.com/products/dotfuscator/compare-editions) (.NET, Xamarin)
 
 ## CWE/OWASP
 
