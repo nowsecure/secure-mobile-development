@@ -25,15 +25,23 @@ If the application handles highly sensitive data, consider implementing anti-deb
 The binaries in iOS applications distributed in the App Store are encrypted, adding another layer of complexity. While tools exist to strip the FairPlay digital rights management (DRM) encryption from these binaries, this layer of DRM increases the amount of time and proficiency level required to attack the binary. The encryption used in the App Store application can, however, be stripped by a skilled attacker. The attacker achieves this by dumping the memory from which an application is loaded directly from a device’s memory when it's run.
 
 ## References
+
+### Android
+ * [ProGuard](http://proguard.sourceforge.net/) and <http://developer.android.com/tools/help/proguard.html>
+ * [DexGuard](http://www.saikoa.com/dexguard)
+
+### iOS
  * [ObjC-Obfuscator](https://github.com/FutureWorkshops/Objc-Obfuscator)
  * [iOS-Class-Guard](https://github.com/Polidea/ios-class-guard)
- * [FairPlay DRM overview on iOS](https://www.theiphonewiki.com/wiki/Copy_Protection_Overview)
- * [Bugging Debuggers on iOS](https://www.theiphonewiki.com/wiki/Bugging_Debuggers)
- * [LLVM-Obfuscator](https://github.com/obfuscator-llvm/obfuscator/wiki) (for iOS and Android)
- * [Android - ProGuard](http://proguard.sourceforge.net/) and <http://developer.android.com/tools/help/proguard.html>
- * [Android - DexGuard](http://www.saikoa.com/dexguard)
+ * [FairPlay DRM overview](https://www.theiphonewiki.com/wiki/Copy_Protection_Overview)
+ * [Bugging Debuggers](https://www.theiphonewiki.com/wiki/Bugging_Debuggers)
+
+### Both
+ * [LLVM-Obfuscator](https://github.com/obfuscator-llvm/obfuscator/wiki)
 
 ## CWE/OWASP
 
+ * [OWASP Mobile Application Security Verification Standard, Resiliency Against Reverse Engineering Requirements](https://github.com/OWASP/owasp-masvs/blob/master/Document/0x14-V8-Resiliency_Against_Reverse_Engineering%20Requirements.md)
  * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
  * [CWE-656: Reliance on Security Through Obscurity](http://cwe.mitre.org/data/definitions/656.html)
+
