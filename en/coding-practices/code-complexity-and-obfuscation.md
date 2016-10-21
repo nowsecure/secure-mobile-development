@@ -29,16 +29,18 @@ The binaries in iOS applications distributed in the App Store are encrypted, add
 ### Android
  * [ProGuard](http://proguard.sourceforge.net/) and <http://developer.android.com/tools/help/proguard.html>
  * [DexGuard](http://www.saikoa.com/dexguard)
+ * [DashO](https://www.preemptive.com/products/dasho/overview)
 
 ### iOS
  * [PreEmptive Protection for iOS - Rename](https://github.com/preemptive/PPiOS-Rename)
  * [ObjC-Obfuscator](https://github.com/FutureWorkshops/Objc-Obfuscator)
  * [FairPlay DRM overview](https://www.theiphonewiki.com/wiki/Copy_Protection_Overview)
  * [Bugging Debuggers](https://www.theiphonewiki.com/wiki/Bugging_Debuggers)
+ * [PreEmptive Protection for iOS - ControlFlow](https://www.preemptive.com/products/ppios)
 
 ### Other / Multi
  * [LLVM-Obfuscator](https://github.com/obfuscator-llvm/obfuscator/wiki) (iOS, Android, others)
- * [Dotfuscator Community Edition](https://www.preemptive.com/products/dotfuscator/compare-editions) (.NET, Xamarin)
+ * [Dotfuscator Community Edition](https://www.preemptive.com/products/dotfuscator/compare-editions) (.NET Obfuscator with Xamarin support)
 
 ## CWE/OWASP
 
