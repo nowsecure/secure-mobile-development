@@ -1,0 +1,34 @@
+s3_id: <%= ENV['S3_ID'] %>
+s3_secret: <%= ENV['S3_SECRET'] %>
+s3_bucket: <%= ENV['S3_BUCKET'] %>
+s3_key_prefix: 'secure-mobile-development'
+s3_endpoint: us-west-2
+site: _book
+max_age:
+ "en/styles/*": 28800
+ "*": 7200
+gzip:
+ - .html
+ - .js
+ - .css
+ - .jpg
+ - .json
+treat_zero_length_objects_as_redirects: true
+redirects:
+ handling-sensitive-data/implement-secure-data-storage/index.html: /secure-mobile-development/en/sensitive-data/implement-secure-data-storage.html
+ handling-sensitive-data/implement-enhanced-two-factor-authentication/index.html: /secure-mobile-development/en/sensitive-data/implement-enhanced-two-factor-authentication.html
+ handling-sensitive-data/implement-secure-network-transmission-of-sensitive-data/index.html: /secure-mobile-development/en/sensitive-data/implement-secure-network-transmission-of-sensitive-data.html
+ ios/avoid-cached-application-snapshots/index.html: /secure-mobile-development/en/ios/avoid-cached-application-snapshots.html
+ handling-sensitive-data/protect-against-sslstrip/index.html: /secure-mobile-development/en/sensitive-data/protect-against-sslstrip.html
+ servers/server-side-ssl-configuration/index.html: /secure-mobile-development/en/servers/server-side-ssl-configuration.html
+ handling-sensitive-data/fully-validate-ssl-tsl/index.html: /secure-mobile-development/en/sensitive-data/fully-validate-ssl-tls.html
+ android/android-apk-signing/index.html: /secure-mobile-development/en/android/android-apk-signing.html
+ android/implement-file-permissions-carefully/index.html: /secure-mobile-development/en/android/implement-file-permissions-carefully.html
+ coding-practices/code-complexity-and-obfuscation/index.html: /secure-mobile-development/en/coding-practices/code-complexity-and-obfuscation.html
+ coding-practices/test-third-party-libraries/index.html: /secure-mobile-development/en/coding-practices/test-third-party-libraries.html
+ webviews/prevent-framing-and-clickjacking/index.html: /secure-mobile-development/en/webviews/prevent-framing-and-clickjacking.html
+ coding-practices/securely-store-sensitive-data-in-ram/index.html: /secure-mobile-development/en/coding-practices/securely-store-sensitive-data-in-ram.html
+ ios/use-automatic-reference-counting/index.html: /secure-mobile-development/en/ios/implement-protections-against-buffer-overflow-attacks.html
+ android/implement-content-providers-carefully/index.html: /secure-mobile-development/en/android/implement-content-providers-carefully.html
+ ios/use-the-keychain-carefully/index.html: /secure-mobile-development/en/ios/use-the-keychain-carefully.html
+ coding-practices/anti-temper-techniques/index.html: /secure-mobile-development/en/coding-practices/anti-tamper-techniques.html
