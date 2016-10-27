@@ -13,14 +13,14 @@ This is for individuals that need to publish the contents to S3. We use the tool
 
 ## Steps to Publish
 
-1. npm install
-2. gitbook build
-3. vault read aws/creds/s3-books-secure-mobile-development
-4. - Set ENV Vars -
-  * S3_ID=(AWS ACCESS KEY -- from vault read)
-  * S3_SECRET=(AWS SECRET KEY -- from vault read)
-  * S3_BUCKET=books.nowsecure.com
-4. s3_website push
+1. `npm install`
+2. `gitbook build`
+3. `vault read aws/creds/s3-books-secure-mobile-development`
+4. **- Set ENV Vars -**
+  * `S3_ID=(AWS ACCESS KEY -- from vault read)`
+  * `S3_SECRET=(AWS SECRET KEY -- from vault read)`
+  * `S3_BUCKET=books.nowsecure.com`
+4. `s3_website push`
 
 ## Adding Redirects
 
