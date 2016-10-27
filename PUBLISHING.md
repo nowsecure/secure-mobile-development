@@ -26,9 +26,9 @@ This is for individuals that need to publish the contents to S3. We use the tool
 
 To add a redirect just add it to the bottom of the s3_website.yml file in this repo. 
 
-Redirects are based on the relative directory to https://books.nowsecure.com/secure-mobile-development/ and the destination is absolute to https://books.nowsecure.com/
+Redirects are based on the relative directory to `https://books.nowsecure.com/secure-mobile-development/` and the destination is absolute to `https://books.nowsecure.com/`
 
-For example if you want to redirect https://books.nowsecure.com/secure-mobile-development/handling-sensitive-data/implement-secure-data-storage/ to https://books.nowsecure.com/secure-mobile-development/en/sensitive-data/implement-secure-data-storage.html then you'd need to add an entry like the following.
+For example if you want to redirect `https://books.nowsecure.com/secure-mobile-development/handling-sensitive-data/implement-secure-data-storage/` to `https://books.nowsecure.com/secure-mobile-development/en/sensitive-data/implement-secure-data-storage.html` then you'd need to add an entry like the following.
 
 ```yaml
  handling-sensitive-data/implement-secure-data-storage/index.html: /secure-mobile-development/en/sensitive-data/implement-secure-data-storage.html
