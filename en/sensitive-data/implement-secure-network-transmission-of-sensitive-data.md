@@ -14,7 +14,7 @@ Use SSL/TLS either with standard trust validation, or, for increased security, i
 
 To prevent the interception of highly sensitive values (e.g., login IDs, passwords, PINs, account numbers, etc.) via a compromised SSL/TLS connection, implement additional encryption in transit. Encrypt highly sensitive values with AES (also known as Rijndael) using a key size of 256. For hashing purposes, use an algorithm such as SHA-256 or higher.
 
-On the server side, consider accepting only strong TLS ciphers and keys and disabling lower levels of encryption such as export-grade 40-bit encryption (see also best practice 8.2 [Properly Configure Server-Side SSL](../servers/server-side-ssl-configuration)) 
+On the server side, consider accepting only strong TLS ciphers and keys and disabling lower levels of encryption such as export-grade 40-bit encryption (see also best practice 8.2 [Properly Configure Server-Side SSL](../servers/server-side-ssl-configuration.md)) 
 
 ## CWE/OWASP 
 
