@@ -42,7 +42,7 @@ The binaries in iOS applications distributed in the App Store are encrypted, add
 
 ## CWE/OWASP
 
- * [OWASP Mobile Application Security Verification Standard, Resiliency Against Reverse Engineering Requirements](https://github.com/OWASP/owasp-masvs/blob/master/Document/0x14-V8-Resiliency_Against_Reverse_Engineering%20Requirements.md)
+ * [OWASP Mobile Application Security Verification Standard, Resiliency Against Reverse Engineering Requirements](https://github.com/OWASP/owasp-masvs/blob/master/Document/0x15-V9-Resiliency_Against_Reverse_Engineering_Requirements.md)
  * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
  * [CWE-656: Reliance on Security Through Obscurity](http://cwe.mitre.org/data/definitions/656.html)
 
