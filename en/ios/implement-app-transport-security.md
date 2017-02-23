@@ -15,8 +15,11 @@ For apps running on iOS 9.0 or higher, best practice is to enable ATS globally b
 
 ## References
 
- * [App Transport Security REQUIRED January 2017](https://forums.developer.apple.com/thread/48979) - https://forums.developer.apple.com/thread/48979
+ * [Getting Ready for ATS Enforcement in 2017](https://nabla-c0d3.github.io/blog/2016/08/14/ats-enforced-2017/)
+ * [Android buckles down and iOS opens up? Trends in platform security affecting developers](https://www.nowsecure.com/blog/2016/08/24/android-buckles-ios-opens-trends-platform-security-affecting-developers/)
+ * [iOS 10 Security Changes Slide Deck](https://nabla-c0d3.github.io/blog/2016/09/19/ios10-slide-deck/)
  * [As of December, 2016, only 20 percent of apps enable ATS](https://www.nowsecure.com/blog/2016/12/29/enable-ios-app-transport-security-ats/)
+ * [App Transport Security REQUIRED January 2017](https://forums.developer.apple.com/thread/48979) - https://forums.developer.apple.com/thread/48979
  
 ## CWE/OWASP 
 
