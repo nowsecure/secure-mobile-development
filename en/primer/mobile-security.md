@@ -101,7 +101,7 @@ Network-based points of attack can include:
 
 **Man-in-the-Middle (MITM)** – Involves eavesdropping on an existing network connection, intruding into that connection, intercepting messages, and modifying select data.
 
-**SLStrip** – A form of the man-in-the-middle attack that exploits weakness in the SSL/TLS implementation on Web sites, which can rely on the user verifying that an HTTPS connection is present. The attack invisibly downgrades connections to HTTP, without encryption, and is difficult for users to detect in mobile browsers.
+**SSLStrip** – A form of the man-in-the-middle attack that exploits weakness in the SSL/TLS implementation on Web sites, which can rely on the user verifying that an HTTPS connection is present. The attack invisibly downgrades connections to HTTP, without encryption, and is difficult for users to detect in mobile browsers.
 
 **Session hijacking** – Involves exploitation of a session key to gain unauthorized access to user and network information.
 
