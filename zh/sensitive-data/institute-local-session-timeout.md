@@ -1,16 +1,16 @@
-# Institute Local Session Timeout
+# 本地会话超时机制
 
-## Details 
+## 详细描述 
 
-Mobile devices are frequently lost or stolen, and an attacker can take advantage of an active session to access sensitive data, execute transactions, or perform reconnaissance on a device owner’s accounts. In addition, without a proper session timeout, an app may be susceptible to data interception via a man-in-the-middle attack.
+移动设备经常丢失或被盗，攻击者可以利用活动的会话来访问敏感数据，执行事务或在设备所有者的帐户上执行侦察。 此外，如果没有适当的会话超时，应用可能容易受到中间人攻击的数据拦截。
 
-## Remediation
+## 建议
 
-Any time the app is not used for more than 5 minutes, terminate the active session, redirect the user to the log-in screen, ensure that no app data is visible, and require the user to re-enter log-in credentials to access the app.
+任何时间应用程序不使用超过5分钟，终止活动会话，将用户重定向到登录屏幕，确保没有应用程序数据可见，并要求用户重新输入登录凭据以访问 应用程序。
 
-After timeout, also discard and clear all memory associated with user data including any master keys use to decrypt that date (see also best practice 2.5 [Securely Store Sensitive Data in RAM](../coding-practices/securely-store-sensitive-data-in-ram.md))
+超时后，还要丢弃和清除与用户数据相关联的所有内存，包括用于解密数据的任何主密钥 (参考 2.5 [在内存中安全的存储敏感数据](../coding-practices/securely-store-sensitive-data-in-ram.md))
 
-Also, make sure the session timeout occurs on both the client side and the server side to mitigate against an attacker modifying the local timeout mechanism. 
+此外，确保客户端和服务器端都发生会话超时，以减轻攻击者修改本地超时机制。
 
 ## CWE/OWASP 
 

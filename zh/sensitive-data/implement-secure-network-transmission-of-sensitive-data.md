@@ -1,20 +1,20 @@
-# Implement Secure Network Transmission Of Sensitive Data
+# 使用安全的网络传输方法传输敏感数据
 
-## Details 
+## 详细描述 
 
-Unlike web browsers, mobile devices typically do not disclose whether or not an app uses SSL/TLS to secure the transmission of data, and so app users simply have to trust that the app’s developer has implemented network encryption.
+与网络浏览器不同，移动设备通常不会公开应用程序是否使用SSL / TLS来保护数据传输，因此应用程序用户只能相信应用程序的开发人员已实施网络加密。
 
-For many years SSL (followed by TLS) has been the standard for encryption of web communications, including the web services that power mobile apps. However breaches of certifying authorities like DigiNotar and Comodo exposed many users to bogus certificates. The Apple “[goto fail](https://avandeursen.com/2014/02/22/gotofail-security/)” bug further exposed the limits of SSL/TLS’s reliability for app developers.
+多年来，SSL（后继者是TLS）一直是Web通信加密的标准，包括为移动应用程序提供支持的Web服务。 然而，违反认证机构如DigiNotar和Comodo暴露了许多用户伪造证书。 苹果 “[goto fail](https://avandeursen.com/2014/02/22/gotofail-security/)” 错误进一步暴露了SSL / TLS的可靠性依赖于应用程序开发人员。
 
-Today, best practices call for app providers to use SSL/TLS effectively to secure the transmission of passwords, login IDs, and other sensitive data over the network, and even go further and leverage app-layer encryption to protect user data.
+今天，最佳实践要求应用提供商有效地使用SSL / TLS来保护通过网络传输密码，登录ID和其他敏感数据，甚至进一步利用应用层加密来保护用户数据。
 
-## Remediation
+## 建议
 
-Use SSL/TLS either with standard trust validation, or, for increased security, implement  certificate pinning (see also best practice 3.3 [Fully Validate SSL/TLS](fully-validate-ssl-tls.md) and the OWASP “[Pinning Cheat Sheet](https://www.owasp.org/index.php/Pinning_Cheat_Sheet)”).
+使用SSL / TLS与标准信任验证，或为了增加安全性，实施证书锁定(参考 3.3 [完全验证SSL / TLS](fully-validate-ssl-tls.md) 以及 OWASP “[Pinning Cheat Sheet](https://www.owasp.org/index.php/Pinning_Cheat_Sheet)”).
 
-To prevent the interception of highly sensitive values (e.g., login IDs, passwords, PINs, account numbers, etc.) via a compromised SSL/TLS connection, implement additional encryption in transit. Encrypt highly sensitive values with AES (also known as Rijndael) using a key size of 256. For hashing purposes, use an algorithm such as SHA-256 or higher.
+为了防止通过受损的SSL / TLS连接拦截高度敏感的值（例如登录ID，密码，PIN，帐号等），请在传输过程中增加额外的加密。 使用密钥大小256为AES（也称为Rijndael）加密高度敏感的值。而对于hash，请使用诸如SHA-256或更高版本的算法。
 
-On the server side, consider accepting only strong TLS ciphers and keys and disabling lower levels of encryption such as export-grade 40-bit encryption (see also best practice 8.2 [Properly Configure Server-Side SSL](../servers/server-side-ssl-configuration.md)) 
+在服务器端，请考虑仅接受强TLS密码和密钥，并禁用较低级别的加密，例如导出级40位加密 (参考 8.2 [正确配置服务器端SSL](../servers/server-side-ssl-configuration.md)) 
 
 ## CWE/OWASP 
 

@@ -1,14 +1,14 @@
-# Avoid Intent Sniffing
+# 避免 Intent 嗅探
 
-When an activity is initiated by another application using a broadcast intent, the data passed in the intent can be read by a malicious app.
+当activity由另一个使用广播Intent的应用程序启动时，Intent中传递的数据可以由恶意应用程序读取。
 
-## Details 
+## 详细描述 
 
-When another application initiates activity by sending a broadcast intent, malicious apps can read the data included in the intent. The malicious app can also read a list of recent intents for an application. For example, if an app invokes and passes a URL to the Android web browser, an attacker could sniff that URL.
+当另一个应用程序通过发送广播Intent启动activity时，恶意应用程序可以读取Intent中包含的数据。 恶意应用程序还可以读取应用程序的最近Intent列表。 例如，如果应用程序调用并传递URL到Android Web浏览器，攻击者可以嗅探该URL。
 
-## Remediation
+## 建议
 
-Do not pass sensitive data between apps using broadcast intents. Instead, use explicit intents.
+不要在使用广播Intent的应用之间传递敏感数据。 而使用显式Intent。
 
 ## CWE/OWASP
 

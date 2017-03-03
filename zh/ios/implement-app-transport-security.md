@@ -1,19 +1,18 @@
-# Implement App Transport Security (ATS)
+# 应用ATS(App Transport Security)
 
-## Details 
+## 详细描述 
 
-New in iOS 9, App Transport Security (ATS) helps ensure secure connections between an app and any back-end server(s). It is enabled by default when an app is linked against the iOS 9.0 SDK or later. With ATS enabled, HTTP connections are forced to use HTTPS (TLS v1.2) and any attempts to connect using insecure HTTP will fail.
+iOS 9中的新功能，ATS(App Transport Security)有助于确保应用程序和任何后端服务器之间的安全连接。 默认情况下，当应用程序与iOS 9.0 SDK或更高版本链接时，它会启用。 启用ATS后，HTTP连接将强制使用HTTPS（TLS v1.2），并且使用不安全HTTP连接的任何尝试都将失败。
 
-Implementing ATS includes a couple of options:
+应用ATS包括几个方案：
 
-* A developer can *enable* ATS globally (by linking to iOS 9.0 or later SDK) and then choose to decrease ATS restrictions on a specific server using an exception key
-* A developer can *disable* ATS globally (by setting the NSAllowsArbitraryLoads key to YES) and then use an exception to increase ATS restrictions on a specific server
+* 开发人员可以 *启用* 全局ATS（通过链接到iOS 9.0或更高版本的SDK），然后选择使用例外减少特定服务器上的ATS限制
+* 开发人员可以 *禁用* 全局ATS（通过将NSAllowsArbitraryLoads键设置为YES），然后使用例外来增加特定服务器上的ATS限制
 
-## Remediation
+## 建议
 
-For apps running on iOS 9.0 or higher, best practice is to enable ATS globally by linking to the iOS 9.0 or later SDK and *NOT* setting the `NSAllowsArbitraryLoads` key to `Yes` or `True`.  Apple currently allows developers to include exceptions for any domains for which TLS cannot be enforced. Exceptions can be made using the `NSExceptionAllowsInsecureHTTPLoads` or `NSThirdPartyExceptionAllowsInsecureHTTPLoads` keys. It is important to note that beginning in January 2017, Apple will require appropriate justification from developers for any exceptions declared inside the application (during App Store review). Otherwise, all communications must use ATS.
-
-## References
+对于在iOS 9.0或更高版本上运行的应用程序，最佳做法是通过链接到iOS 9.0或更高版本的SDK来启用ATS，并且*不要*将`NSAllowsArbitraryLoads`键设置为“Yes”或“True”。 苹果目前允许开发人员为任何不能实施TLS的域设置为例外。 可以使用`NSExceptionAllowsInsecureHTTPLoads`或`NSThirdPartyExceptionAllowsInsecureHTTPLoads`键来设置例外。 重要的是要注意，从2017年1月开始，苹果将要求开发人员对应用程序中声明的任何异常（在App Store审核期间）提供合理的理由。 否则，所有通信必须使用ATS。
+## 参考
 
  * [App Transport Security REQUIRED January 2017](https://forums.developer.apple.com/thread/48979)
  * [Getting Ready for ATS Enforcement in 2017](https://nabla-c0d3.github.io/blog/2016/08/14/ats-enforced-2017/)

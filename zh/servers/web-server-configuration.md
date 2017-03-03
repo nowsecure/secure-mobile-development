@@ -1,18 +1,18 @@
-# Implement Proper Web Server Configuration
+# 实施正确的Web服务器配置
 
-## Details 
+## 详细描述 
 
-Certain settings on a web server can increase security. One commonly overlooked vulnerability on a web server is information disclosure. Information disclosure can lead to serious problems, because every piece of information attackers can gain from a server makes staging an attack easier.
+Web服务器上的某些设置可以提高安全性。 Web服务器上通常被忽视的漏洞是信息泄露。 信息泄露可能导致严重的问题，因为每一个信息攻击者都可以从服务器获得使攻击更容易。
 
-## Remediation
+## 建议
 
-A simple way to reduce information disclosure is to disable verbose errors. Verbose errors can be useful in a development environment, but in a production environment can leak critical information such as web framework information and versions. Attackers can use this information to target attacks that are designed to exploit implementation-specific flaws.
+减少信息泄露的一种简单方法是禁用详细错误。 详细错误在开发环境中很有用，但在生产环境中可能会泄露关键信息，例如Web框架信息和版本。 攻击者可以使用此信息来定位旨在利用实施特定缺陷的攻击。
 
-Another simple way to reduce information disclosure is to return the minimum amount of information in server responses. By default, Apache will return its version number, the OS it is running on, and the plugins running. By changing a single line in the configuration file, this can be pared down to only disclosing that the server is running Apache with no effect on functionality.
+减少信息泄露的另一个简单方法是返回服务器响应中的最少量的信息。 默认情况下，Apache将返回其版本号，运行它的操作系统和插件运行。 通过更改配置文件中的单个行，可以减少到只公开服务器正在运行Apache而不影响功能。
 
-One configuration change in servers that can greatly improve security is to change any default directories. Attackers frequently search the Internet for sites with “low-hanging fruit,” such as default logins, easily guessable admin interfaces, and simple naming schemes for “hidden” directories. It is a good policy to obfuscate the locations of any sensitive pages on a server that need to be web-accessible.
+可以大大提高安全性的服务器中的一个配置更改是更改任何默认目录。 攻击者经常在Internet上搜索具有“low-hanging fruit”的网站，例如默认登录，容易猜到的管理界面，以及简单的“隐藏”目录命名方案。 这是一个好的策略，模糊处理需要网络访问的服务器上的任何敏感网页的位置。
 
-Administration or other restricted areas should not be publicly web-accessible unless absolutely necessary, and must be resistant to brute force attacks. HTTP authentication or forms authentication without lockout protection can (and will) be attacked by brute force.
+管理或其他限制区域不应公开网络访问，除非绝对必要，并且必须抵抗暴力攻击。 HTTP认证或没有锁定保护的表单认证可以（并且将）被暴力攻击。
  
 ## CWE/OWASP
 

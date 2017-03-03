@@ -1,16 +1,16 @@
-# Protect Application Services
+# 保护应用程序服务
 
-## Details 
+## 详细描述 
 
-Services are typically used for background processing. Like BroadcastReceivers and application activities, application services can be invoked by external applications and so should be protected by permissions and export flags.
+服务通常用于后台处理。 与BroadcastReceivers和应用程序 activities 一样，应用程序服务可以由外部应用程序调用，因此应该由权限和导出标志保护。
 
-## Remediation
+## 建议
 
-A service may have more than one method which can be invoked from an external caller. It is possible to define arbitrary permissions for each method and check if the calling package has the corresponding permission by using `checkPermission()`. Alternatively, one could define separate services and secure access through the use of permissions defined in the AndroidManifest.
+服务可以具有可以从外部调用者调用的多于一个方法。 可以为每个方法定义任意权限，并通过使用`checkPermission（）`检查调用包是否具有相应的权限。 或者，可以通过使用AndroidManifest中定义的权限来定义单独的服务和访问权限。
 
-When calling a service with sensitive data, validate that the correct service is being called and not a malicious service. If you know the exact name of the component to which you wish to connect, specify that name in the Intent used to connect. Another method is to use `checkPermission()` again to verify whether the calling package has the permissions required to receive the desired Intent. The user grants permissions to the app during installation.
+当调用具有敏感数据的服务时，验证正在调用正确的服务，而不是恶意服务。 如果您知道要连接的组件的确切名称，请在用于连接的意图中指定该名称。 另一种方法是再次使用`checkPermission()`来验证调用包是否具有接收所需Intent所需的权限。 用户在安装期间向应用程序授予权限。
 
-Here is an example where a custom permission is declared and required to be used when accessing the `com.example.MyService.`
+下面是一个例子，声明并需要在访问`com.example.MyService.`时使用自定义权限
 
 ```xml
 <permission android:name="com.example.mypermission" 

@@ -1,39 +1,38 @@
-# Prevent Framing and Clickjacking
+# 防止frame劫持和点击劫持
 
-## Details 
+## 详细描述 
 
-Framing involves delivery of a Web/WAP site within an iFrame. This attack can enable the “wrapper” site to execute a clickjacking attack. Clickjacking is a very real threat that has been exploited on high-profile services (e.g., Facebook) to steal information or redirect users to attacker controlled sites.
+Frame劫持涉及在iFrame中传送Web / WAP站点。 这种攻击可以使“包装”站点执行点击劫持攻击。 点击劫持是一个非常真实的威胁，已被利用高信息服务（例如Facebook）窃取信息或重定向用户到攻击者控制的网站。
 
-The primary purpose for framing is to trick users into clicking on something different that what they intended. The goal is to gather confidential information or take control of the affected computer through chained vulnerabilities like Cross Site Scripting. This attack commonly takes the form of a script that is embedded within the source code, which is executed without the user’s knowledge.  It can be triggered when users click a button that appears to perform other function.
+Frame劫持的主要目的是诱骗用户点击不同的东西，他们的意图。 目标是通过链接漏洞（如跨站脚本）收集机密信息或控制受影响的计算机。 这种攻击通常采用嵌入在源代码中的脚本的形式，该脚本在用户不知道的情况下执行。 当用户单击看起来执行其他功能的按钮时，可以触发。
 
-## Remediation
+## 建议
 
-The best way to prevent this practice in iOS is to not use WebViews. Also use
+在iOS中防止这种做法的最好方法是不使用WebViews。 非常非常小心的使用
 
 ``` 
 - (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script
 ```
 
-very, very carefully [(click here for more info on the NSString Class Reference)](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSString).
+[(click here for more info on the NSString Class Reference)](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSString).
 
-One mechanism for the prevention of framing leverages client-side JavaScript. Most Web sites are no longer designed or able to run without JavaScript, so the implementation of security measures in JavaScript (and disabling site without it) is an option. Though client-side and therefore not impervious to tampering, this layer does raise the bar for the attacker.  Below is an example of JavaScript code that forces the site to the “top” frame, thereby “busting” a frame which had loaded the site.
+防止Frame劫持的一种机制利用客户端JavaScript。 大多数网站已经不能离开JavaScript，因此在JavaScript中实现安全措施（和禁用没有它的网站）是一个方案。 虽然客户端不是不能被篡改，但是这方案确实提高了攻击者的标准。 下面是一个JavaScript代码示例，它强制网站到“顶部”框架，从而“破坏”已加载网站的框架。
 
-There are additional steps an attacker can add to their frame to attempt to prevent the frame busting code, such as an alert to the user on unload asking them not to exit. More complex JavaScript may be able to counter such techniques. The inclusion of at least basic frame busting code makes simple framing a much more difficult process.
+攻击者可以添加一些额外的代码来防止Frame劫持被破坏，例如在Frame unload时提醒用户不要退出。 更复杂的JavaScript可能能够对抗这样的技术。 但是包含Frame劫持破坏代码使得简单的Frame劫持变得困难。
 
-**X-FRAME-OPTIONS HEADER**– A new and better anti-framing option has recently been implemented in some browsers, based on an HTTP Header sent in the response. By configuring this header at the Webserver level, the browser is instructed not to display the response content in a frame or iFrame.
-An example implementation of this in an Apache config file is provided in the code examples.  
+**X-FRAME-OPTIONS HEADER**– 最近在一些浏览器中基于响应中的HTTP头实现了一种新的更好的反frame 劫持方案。 通过在Webserver级别配置此HTTP头，指示浏览器不在Frame或iFrame中显示响应内容。在代码示例中提供了Apache配置文件中的示例实现。
 
-APIs designed specifically for WebView can be abused to compromise the security of web contents specified inside a WebView. The best way to protect an application and its users against this well-known vulnerability is to:
+专门为WebView设计的API可能被滥用来危害WebView中指定的Web内容的安全性。 保护应用程序及其用户免受这个众所周知的漏洞的最佳方法是：
 
- * Prevent the X-Frame-Option HTTP response header from loading frames that request content hosted on other domain names. However, this mitigation is not applicable when dealing with a compromised host.
+ * 防止X-Frame-Option HTTP响应头加载请求其他域名托管的内容的框架。 但是，这种方案不适用于处理受影响的主机。
  
- * Leverage internal defense mechanisms to ensure that all UI elements load in top level frames; Thus avoiding serving content through untrusted frames setup at lower levels.
+ * 利用内部防御机制，确保所有UI元素在顶层框架中加载; 这样就避免了在较低的层次，通过不信任的Frame展示内容。
  
-## References 
+## 参考 
 
  * [https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header](https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header)
 
-Basic frame busting javascript:
+基本Frame破解javascript：
 
 ```javascript
 if( self != top ) { 
@@ -41,13 +40,12 @@ if( self != top ) {
 }
 ```
 
-IFrame prevention for server-side Apache config file:
+服务器端Apache配置文件的反iframe方案：
 
 ```
 Header add X-FRAME-OPTIONS "DENY"
 ```
-
-Another option is to set this value to “SAMEORIGIN” which will only allow a frame from the same domain. This header has been tested on various browsers including Safari on iOS 4 and confirmed to prevent the display of a page in an iFrame. Provided that no requirements exist for delivery in an iFrame, the recommendation is to use DENY.
+另一个选项是将此值设置为“SAMEORIGIN”，它将只允许来自相同域的Frame。 此标题已在各种浏览器上测试，包括iOS 4上的Safari，并确认可防止在iFrame中显示页面。 如果在iFrame中没有传送要求，建议使用DENY。
 
 ## CWE/OWASP
 

@@ -1,18 +1,18 @@
-# Implement PendingIntents Carefully
+# 谨慎实现 PendingIntents
 
-A PendingIntent allows an app to pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions).
+PendingIntent允许应用程序将Intent传递给第二个应用程序，然后可以执行该Intent，就像它是原始应用程序一样（即具有相同的权限）。
 
-## Details 
+## 详细描述 
 
-With a PendingIntent, an app can pass an Intent to a second application that can then execute that Intent as if it were the originating app (i.e., with the same permissions). This allows other apps to call back to the originating app's private components.  The external app, if malicious, may try to influence the destination and/or data/integrity.
+使用PendingIntent，应用程序可以将Intent传递给第二个应用程序，然后可以执行该Intent，就像它是原始应用程序一样（即具有相同的权限）。 这允许其他应用程序回调到原始应用程序的私有组件。 外部应用程序，如果是恶意的，可能会尝试影响目标 和/或 数据/完整性。
 
-## Remediation
+## 建议
 
-Use PendingIntents as delayed callbacks to private BroadcastReceivers or broadcast activities, and explicitly specify the component name in the base Intent.
+使用PendingIntents作为对私有BroadcastReceivers或broadcast activities的延迟回调，并在基本Intent中显式指定组件名称。
 
-## References 
+## 参考 
 
- * Sample code here [https://gist.github.com/scottyab/d5ab6a284622ebc46d5a](https://gist.github.com/scottyab/d5ab6a284622ebc46d5a)
+ * 示例代码 [https://gist.github.com/scottyab/d5ab6a284622ebc46d5a](https://gist.github.com/scottyab/d5ab6a284622ebc46d5a)
 
 ## CWE/OWASP
 

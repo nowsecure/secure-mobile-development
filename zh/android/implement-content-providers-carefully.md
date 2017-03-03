@@ -1,18 +1,18 @@
-# Implement Content Providers Carefully
+# 谨慎使用content providers
 
-## Details 
+## 详细描述 
 
-Content providers allow apps to share data using a URI-addressing scheme and relational database model. They can also be used to access files via the URI scheme.
+Content providers 允许应用程序使用URI寻址方案和关系数据库模型共享数据。 它们也可以用于通过URI方案访问文件。
 
-## Remediation
+## 建议
 
-Content providers can declare permissions and separate read and write access. Do not give a content provider write access unless it's absolutely necessary. Make sure to set permissions so that unprivileged apps cannot read the `ContentProvider` instance unless required.
+Content providers 可以声明权限和单独的读写访问。 除非绝对必要，否则不要给内容提供者写访问权限。 除非必需，请确保设置权限，以便非特权应用程序无法读取`ContentProvider`实例。
 
-Limit access to the minimum required for an operation. For example, to share an instant message with another app that emails that message to a contact, share only that single message and not all instant messages. The record-level delegation feature within content providers allows for the sharing of a specific record or file without sharing the entire database. Once the external app returns to the originating app, the delegation ends.
+将访问限制为操作所需的最低限度。 例如，要与向某个联系人发送该邮件的其他应用程序共享即时消息，只共享该单个邮件，而不是所有即时消息。 内容提供商中的记录级委派功能允许共享特定记录或文件，而不共享整个数据库。 一旦外部应用程序返回到原始应用程序，代表结束。
 
-Treat parameters passed to content providers as untrusted input and don't use them directly in SQL queries without sanitation. Without sanitation, SQL code can be sent via content provider requests. If the SQL code is included in a query, it can return data or give control to an attacker.
+将传递给内容提供者的参数视为不受信任的输入，并且不在没有防护的情况下直接在SQL查询中使用它们。 没有防护的SQL代码可以通过内容提供者请求发送。 如果SQL代码包含在查询中，它可以返回数据或向攻击者提供控制权。
 
-Content providers that serve files based on a file name being passed to the provider should ensure path traversals are filtered out. For example, if an attacker were to include `../../../file` in a request, it could cause the program to read and return data from files the attacker wouldn't otherwise have access to in the context of the application. Additionally, be aware that following symlinks created by an attacker can have similar results.
+基于文件名传递给提供者的文件的内容提供者应该确保路径遍历被过滤掉。 例如，如果攻击者在请求中包含`../../../ file'，它可能导致程序读取并返回攻击者在其他情况下不能访问的文件中的数据。 应用程序。 此外，请注意，攻击者创建的以下符号链接可能具有类似的结果。
 
 ## CWE/OWASP
 

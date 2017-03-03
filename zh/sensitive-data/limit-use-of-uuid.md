@@ -1,23 +1,23 @@
-# Limit Use of UUID
-## Details 
+# 限制使用UUID
+## 详细描述 
 
-Most mobile devices have a unique ID, also called a Universal Unique Identifier (UUID), assigned at the time of manufacture for identification purposes. For example, iOS devices are assigned what's called a Unique Device Identifier (UDID). The ability to uniquely identify a device is often important to procure, manage and secure data. Developers quickly adopted the UUID and UDID for device identification, which resulted in it becoming a foundation of security for many systems.
+大多数移动设备具有在制造时为了识别目的而分配的唯一ID（也称为通用唯一标识符（UUID））。 例如，iOS设备分配了所谓的唯一设备标识符（UDID）。 唯一标识设备的能力对于获取，管理和保护数据通常很重要。 开发人员迅速采用UUID和UDID进行设备识别，从而使其成为许多系统的安全基础。
 
-Unfortunately, this approach brings with it several privacy and security issues. First, many online systems have connected the UUID of a device to an individual user to enable tracking across applications even when the user is not logged in to the app. This advanced ability to track a user has become a major privacy concern.
+不幸的是，这种方法带来了几个隐私和安全问题。 首先，许多在线系统已将设备的UUID连接到单个用户，以便即使在用户未登录到应用时也能够跨应用进行跟踪。 这种跟踪用户的高级功能已经成为主要的隐私问题。
 
-Beyond that, apps which identify a person through the UUID risk exposing the data of a device's previous owner to a new owner. In one instance, after re-setting an iPhone, we gained access to the prior user's account for an online music service even though all user data had been erased. Not only is this a privacy issue, it's asecurity threat because an attacker could fake a UUID.
+除此之外，通过UUID识别人员的应用程序有风险暴露设备的以前的所有者的数据到新的所有者。 在一个实例中，在重新设置iPhone之后，即使所有用户数据已被擦除，我们也可以访问先前用户的在线音乐服务的帐户。 这不仅是一个隐私问题，它的安全威胁，因为攻击者可以伪造一个UUID。
 
-Apple has recognized both the privacy and security risks of iOS's UDID and removed developer access to it. With the UDID out of reach, some developers apply other device-identification methods involving the MAC address of the wireless network interface or OpenUDID. These methods have now been banned at the system/API level and are also flagged and rejected as part of the AppStore review process.
+苹果已经认识到iOS的UDID的隐私和安全风险，并删除了开发者对它的访问。 在UDID不可用的情况下，一些开发人员应用涉及无线网络接口或OpenUDID的MAC地址的其他设备识别方法。 这些方法现在已在系统/ API级别被禁止，并且作为AppStore审查过程的一部分被标记和拒绝。
 
-## Remediation
+## 建议
 
-We recommend that developers avoid using any device-provided identifier to identify the device, especially if it's integral to an implementation of device authentication. Instead, we recommend the creation of an app-unique "device factor" at the time of registration, installation, or first execution. This app-unique device factor in combination with user authentication can then be required to create a session. The device factor could also be used as an additional factor in an encryption routine.
+我们建议开发人员避免使用任何设备提供的标识符来标识设备，特别是如果它是实施设备身份验证的一部分。 相反，我们建议在注册，安装或首次执行时创建应用程序唯一的“设备因子”。 然后可能需要将此应用程序唯一的设备因子与用户身份验证结合，以创建会话。 设备因子也可以用作加密例程中的附加因子。
 
-Since it is not relying on predictable, device-supplied data, exploitation becomes more difficult. By leveraging a challenge-response approach, the server and device can authenticate each other prior to user authentication. To gain system access an attacker would have to exploit both factors. Developers can also implement a feature where the device factor is reset on the client or server side, forcing a more stringent re-authentication of the user and device.
+由于它不依赖于可预测的，设备提供的数据，因此开发变得更加困难。 通过利用挑战 - 响应方法，服务器和设备可以在用户认证之前彼此认证。 要获得系统访问，攻击者必须利用这两个因素。 开发人员还可以实现在客户端或服务器端重置设备因素的功能，从而强制对用户和设备进行更严格的重新身份验证。
 
-To protect user privacy while preserving advertising capabilities, Apple recommends using the advertisingIdentifier - a unique identifier shared across all apps in the system. A person can reset the advertisingIdentifier on their device at any time in the Settings -> Privacy -> Advertising menu.
+为了在保留广告功能的同时保护用户隐私，Apple建议使用advertisingIdentifier - 在系统中所有应用程序之间共享的唯一标识符。用户可以随时在设置 - >隐私 - >广告菜单中重置其设备上的advertisingIdentifier。
 
-## References
+## 参考
 
  * [Unique Identifiers in iOS](https://possiblemobile.com/2013/04/unique-identifiers/)
  

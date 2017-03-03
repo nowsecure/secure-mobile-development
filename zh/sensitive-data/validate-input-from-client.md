@@ -1,12 +1,12 @@
-# Validate Input From Client
+# 验证来自客户端的输入
 
-## Details 
+## 详细描述 
 
- Even if data is is generated from your app, it is possible for this data to have been intercepted and manipulated.  This could include attacks that cause the app to crash (generating a key crash log), buffer overflows, SQL Injection, and other attacks. This can easily be enforced in iOS by realizing the methods in the UITextFieldDelegate and taking advantage of the recommendations above.
+即使数据是从您的应用程序生成的，这些数据也可能被拦截和操纵。 这可能包括导致应用程序崩溃（生成关键崩溃日志），缓冲区溢出，SQL注入和其他攻击的攻击。 通过实现UITextFieldDelegate中的方法并利用上面的建议，这可以很容易地在iOS中执行。
  
-## Remediation
+## 建议
 
- As with proper web application security, all input from the client should be must be treated as untrusted.  Services must thoroughly filter and validate input from the app and user.  Proper sanitization includes all user input before transmitting and during receipt.
+与正确的Web应用程序安全性一样，客户端的所有输入都必须被视为不受信任。 服务必须彻底过滤和验证应用程序和用户的输入。 适当的清理包括在发送之前和接收期间的所有用户输入。
 
 ## References 
 

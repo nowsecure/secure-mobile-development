@@ -1,12 +1,12 @@
-# Protect Internal Resources
+# 保护内部资源
 
-## Details 
+## 详细描述 
 
-Resources for internal use such as administrator login forms frequently leverage authentication that is not resistant to brute force. For example HTTP or forms authentication without lockout. Compromise of administration or other internal resources can lead to extensive data loss and other damage.
+用于内部使用的资源（例如管理员登录表单）经常使用可能被暴力破解的身份验证。 例如无锁定的HTTP或表单认证。 管理或其他内部资源的泄露可能导致广泛的数据丢失和其他损害。
 
-## Remediation
+## 建议
 
-Such resources should be blocked from external access.   Any resource that does not require public Internet access should be restricted using firewall rules and network segmentation. If a login page, admin area or other resource is accessible externally, assume it will be discovered by malicious users and attacked by brute force.
+这种资源应该被阻止外部访问。 任何不需要公共互联网访问的资源都应该使用防火墙规则和网络分段进行限制。 如果登录页面，管理区域或其他资源是外部可访问的，它就会被恶意用户发现和暴力攻击。
 
 ## CWE/OWASP
 

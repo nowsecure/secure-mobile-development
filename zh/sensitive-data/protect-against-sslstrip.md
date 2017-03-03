@@ -1,20 +1,20 @@
-# Protect Against SSL Downgrade Attacks
+# 防止SSL降级攻击
 
-## Details
+## 详细描述
 
-Using this form of a man-in-the-middle attack, an attacker can bypass SSL/TLS by transparently hijacking HTTP traffic on a network, monitoring for HTTPS requests, and then eliminating SSL/TLS, which creates an unsecured connection between the client and server. This attack can be particularly difficult to prevent on mobile web apps (mobile web apps are essentially webpages made to look like an app).
+使用这种形式的中间人攻击，攻击者可以通过透明地劫持网络上的HTTP流量，监控HTTPS请求，然后消除SSL / TLS来绕过SSL / TLS，从而在客户端和服务器之间创建不安全的连接。 这种攻击在移动网络应用上尤其难以预防（移动网络应用本质上是一个看起来像应用的网页）。
 
-## Remediation
+## 建议
 
-Serve all traffic, even non-sensitive traffic,over TLS. This prevents any possible downgrading/stripping attacks because an attacker needs an initial plaintext “entry point” to accomplish said attack.
+通过TLS提供所有流量，甚至非敏感流量。 这防止了任何可能的降级/剥离攻击，因为攻击者需要初始明文“入口点”来完成所述攻击。
 
-Validate that SSL/TLS is active. Validating SSL/TLS is relatively straight-forward in fully native apps. Mobile web apps can validate SSL/TLS through JavaScript so that if an HTTPS connection is not detected, the client redirects to HTTPS. A more reliable means to require SSL/TLS is the HTTP Strict Transport Security (HSTS) header. The HSTS header forces all subsequent connections to that domain to use TLS and the original certificate. Browsers are only starting to implement the HSTS header and mobile browser support lags behind. 
+验证SSL / TLS是否处于活动状态。 在完全本机应用程序中验证SSL / TLS是相对简单的。 移动网络应用可以通过JavaScript验证SSL / TLS，以便如果未检测到HTTPS连接，则客户端将重定向到HTTPS。 要求SSL / TLS的更可靠的手段是HTTP严格传输安全（HSTS）头。 HSTS标头强制与该域的所有后续连接使用TLS和原始证书。 浏览器只是开始实现HSTS头而移动浏览器总是滞后。
 
-Avoid using icons or language  within the app that assures users of a secure connection when said connection does not depend on a validated HTTPS session. User education is an important component in reducing the risk of SSL/TLS downgrade attacks. Use alerts and text within the app to reinforce to users the importance of protecting network traffic using HTTPS.
+在应用程序中使用图标或语言，以确保用户在所述连接不依赖于经过验证的HTTPS会话时知道并进行安全连接。 教育用户是降低SSL / TLS降级攻击风险的重要组成部分。 在应用程式内使用弹出提示和文字提示，强化使用者使用HTTPS保护网路流量的重要性。
 
-Another mitigation recently put in place within both Android and iOS is to treat non-TLS/plaintext traffic as a developer error. Android recently added `android:usesCleartextTraffic` ([Android M and the War on Cleartext Traffic](https://koz.io/android-m-and-the-war-on-cleartext-traffic/) - https://koz.io/android-m-and-the-war-on-cleartext-traffic/), and iOS 9 and above require that you manually add exceptions for plaintext traffic. Replacement web protocol HTTP/2 is another future mitigation because it uses only TLS (and includes other features).
+最近在Android和iOS中实施的另一种缓解措施是将非TLS /纯文本流量视为开发人员错误。Android最近添加 `android:usesCleartextTraffic` ([Android M and the War on Cleartext Traffic](https://koz.io/android-m-and-the-war-on-cleartext-traffic/)，而iOS 9及更高版本要求您手动添加明文流量的例外。 替换Web协议HTTP / 2是另一个未来的解决方案，因为它仅使用TLS（并且包括其他功能）.
 
-## References
+## 参考
 
 * [Moxie Marlinspike’s sslstrip exploitation tool](https://moxie.org/software/sslstrip/) - https://moxie.org/software/sslstrip/
 

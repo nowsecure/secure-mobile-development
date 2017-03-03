@@ -1,21 +1,21 @@
-# Implement Touch ID Properly
+# 正确应用Touch ID
 
-## Details 
+## 详细描述 
 
-Touch ID is commonly known for its use in allowing a user to authenticate to and unlock their device without entering a passcode. Some developers also use Touch ID to allow the user to authenticate to their app using a stored device fingerprint.
+Touch ID通常被用来允许用户在不输入密码的情况下对其设备进行认证和解锁。 一些开发人员还使用Touch ID，允许用户使用存储的设备指纹对其应用进行身份验证。
 
-When a developer implements Touch ID in their app, they typically do so in one of two ways:
+当开发人员在其应用中应用Touch ID时，通常会采用以下两种方式之一：
 
-1. Using only the Local Authentication framework to authenticate the user
-  1. This method leaves the authentication mechanism vulnerable to bypass
-  2. An attacker can modify the local check at runtime, or by patching the binary. This is done by overriding the `LAContextevaluatePolicy:localizedReason:reply` method implementation
-2. Using Keychain access control lists (ACLs)
+1. 仅使用本地认证框架来认证用户
+  1. 这种方法使认证机制很容易被绕过
+  2. 攻击者可以在运行时修改本地检查，或者通过修补二进制。 这可以通过覆盖`LAContextevaluatePolicy：localizedReason：reply`方法来实现
+2. 使用钥匙串访问控制列表（ACL）
 
-## Remediation
+## 建议
 
-When using Touch ID for authentication, store the app’s secret in the Keychain with an ACL assigned to that item. With this method, iOS performs a user presence check before reading and returning Keychain items to the app. Developers can find sample code on the Apple website at [https://developer.apple.com/library/ios/samplecode/KeychainTouchID/Listings/KeychainTouchID_AAPLKeychainTestsViewController_m.html](https://developer.apple.com/library/ios/samplecode/KeychainTouchID/Listings/KeychainTouchID_AAPLKeychainTestsViewController_m.html).
+当使用Touch ID进行身份验证时，将应用程序的密钥存储在钥匙串中，并将ACL分配给该项目。 使用此方法，iOS将在读取和将Keychain项目返回到应用程序之前执行用户存在检查。 开发人员可以在Apple网站上找到示例代码： [https://developer.apple.com/library/ios/samplecode/KeychainTouchID/Listings/KeychainTouchID_AAPLKeychainTestsViewController_m.html](https://developer.apple.com/library/ios/samplecode/KeychainTouchID/Listings/KeychainTouchID_AAPLKeychainTestsViewController_m.html).
 
-## References
+## 参考
 
  * [KeychainTouchID: Using Touch ID with Keychain and LocalAuthentication](https://developer.apple.com/library/content/samplecode/KeychainTouchID/Introduction/Intro.html) - https://developer.apple.com/library/content/samplecode/KeychainTouchID/Introduction/Intro.html
  

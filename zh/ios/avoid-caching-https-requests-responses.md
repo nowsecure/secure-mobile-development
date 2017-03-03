@@ -1,20 +1,23 @@
-# Avoid Caching HTTP(S) Requests/Responses
+# 避免缓存HTTP（S）请求/响应
 
-## Details 
+## 详细描述 
 
-By default, iOS’s `NSURLRequest` will cache responses in the Cache.db file. To prevent this insecure behavior, a developer must explicitly disable caching.
+默认情况下，iOS的`NSURLRequest`将响应缓存在Cache.db文件中。 为了防止这种不安全的行为，开发人员必须明确禁用缓存。
 
-## Remediation
+## 建议
 
-The developer can set the `cachePolicy` property of the `NSURLRequest` to disable the caching of HTTP(S) requests and responses. One of many methods for disabling caching is shown in the following code snippet (from [NSURLConnection Delegate Returns Null](http://stackoverflow.com/questions/30667340/nsurlconnection-delegate-returns-null) on Stack Overflow - http://stackoverflow.com/questions/30667340/nsurlconnection-delegate-returns-null):
+开发人员可以设置`NSURLRequest`的`cachePolicy`属性来禁用HTTP（S）请求和响应的缓存。 禁用缓存的许多方法之一如下面的代码片段所示 (从Stack Overflow转载 [NSURLConnection Delegate Returns Null](http://stackoverflow.com/questions/30667340/nsurlconnection-delegate-returns-null) :
 
-`    (NSCachedURLResponse)connection:(NSURLConnection)connection
+```   
+ (NSCachedURLResponse)connection:(NSURLConnection)connection
             willCacheResponse:(NSCachedURLResponse *)cachedResponse {
-        return nil;`
+        return nil;
+        }
+```
 
-Developers can find additional methods for disabling the caching of HTTP(S) requests and responses in the Apple Developer article “Understanding Cache Access” referenced below.
+开发人员还可以在下面引用的Apple Developer文章“Understanding cache access”中找到禁用缓存HTTP（S）请求和响应的其他方法。
 
-## References
+## 参考
 
  * [Understanding cache access](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/Concepts/CachePolicies.html) - https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/Concepts/CachePolicies.html
  

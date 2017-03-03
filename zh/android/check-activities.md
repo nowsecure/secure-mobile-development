@@ -1,16 +1,16 @@
-# Check Activities
+# 检查 Activities
 
-Typically in Android applications an Activity is a 'Screen' in an app.
+通常在Android应用程序中，Activity是应用程序中的“屏幕”。
 
-## Details
+## 详细描述
 
-An Activity can be invoked by any application if it is [`exported` and `enabled`](http://developer.android.com/guide/topics/manifest/activity-element.html). This could allow an attacker to load UI elements in a way the developer may not intend, such as jumping past a password lock screen to access data or functionality. By default Activities are not exported, however, if you define an Intent filter for an Activity it will be exported by the system.
+任何应用程序都可以调用[`exported` 和 `enabled`](http://developer.android.com/guide/topics/manifest/activity-element.html)的Activity . 这可能允许攻击者以开发者可能不想要的方式加载UI元素，例如跳过密码锁定屏幕访问数据或功能。 默认情况下，不会导出Activity，但是，如果为Activity定义了Intent过滤器，系统将导出Activity。
 
-## Remediation
+## 建议
 
-Activities can ensure proper behavior by checking internal app state to verify they are ready to load. For example, first see if the app is in the "unlocked" state and if not jump back to the lock screen. Regardless of what Intent filters are defined, `exported`/`enabled` Activities can be directly invoked with unsanitized data, so input validation is recommended when operating on data provided by an untrusted source.
+Activities 可以通过检查内部应用程序状态来验证它们是否可以加载来确保正确的行为。 例如，首先看看应用程序是否处于“未锁定”状态，如果没有，则跳回到锁定屏幕。 无论定义什么Intent过滤器，`exported` /`enabled`都可以直接使用未定义的数据调用Activity，因此当对不受信任的源提供的数据进行操作时，建议使用输入验证。
 
-Sample Code of passing intent extra ID instead of the whole object.
+传递Intent额外ID的示例代码，而不是整个对象。
 
 ```java
 //bad passing the whole paracable object
@@ -31,6 +31,7 @@ public static Intent getStartingIntent(Context context,
 ```
 
 Avoid intent filters on Activities if they are private, instead use explicit intent.
+避免对私有的Activities添加intent过滤器，而是使用显式intent。
 
 ```xml
 <activity
@@ -41,7 +42,7 @@ Avoid intent filters on Activities if they are private, instead use explicit int
 </activity>
 ```
 
-## References
+## 参考
 
  * [http://commonsware.com/blog/2013/09/11/beware-accidental-apis-avoid-intents-extras.html](http://commonsware.com/blog/2013/09/11/beware-accidental-apis-avoid-intents-extras.html)
  * [http://commonsware.com/blog/2014/04/30/if-your-activity-has-intent-filter-export-it.html](http://commonsware.com/blog/2014/04/30/if-your-activity-has-intent-filter-export-it.html)

@@ -1,16 +1,16 @@
-# Implement File Permissions Carefully
+# 谨慎配置 File Permissions
 
-## Details
+## 详细描述
 
-World readable files can act as a vector for your program to leak sensitive information. World writeable files may expose your app by letting an attacker influence its behavior by overwriting data that is read by your app from storage.  Examples include settings files and stored login information.
+所有人可读的文件可以作为程序的一个向量，泄漏敏感信息。 所有人可写文件可能会暴露您的应用程序，让攻击者通过覆盖您的应用从存储读取的数据影响其行为。 示例包括设置文件和存储的登录信息。
 
-## Remediation
+## 建议
 
-Do not create files with permissions of MODE_WORLD_READABLE or MODE_WORLD_WRITABLE unless it is required as any app would be able to read or write the file even though it may be stored in the app’s private data directory.
+不要创建具有MODE_WORLD_READABLE或MODE_WORLD_WRITABLE权限的文件，除非它是必需的，因为任何应用程序都能读取或写入该文件，即使它可能存储在应用程序的私人数据目录中。
 
-_Note: these constants were deprecated in Android API level 17. Source: [http://developer.android.com/reference/android/content/Context.html](http://developer.android.com/reference/android/content/Context.html)_
+_注意: 这些常量在Android API级别17中已弃用。参考: [http://developer.android.com/reference/android/content/Context.html](http://developer.android.com/reference/android/content/Context.html)_
 
-Do not use modes such as 0666, 0777, and 0664 with the chmod binary or syscalls accepting a file mode (chmod, fchmod, creat, etc)
+不要使用chmod二进制或系统调用接受文件模式（chmod，fchmod，creat等）的模式，例如0666,0777和0664，
 
 ## CWE/OWASP
 

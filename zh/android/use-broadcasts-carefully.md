@@ -1,19 +1,20 @@
-# Use Broadcasts Carefully
+# 谨慎使用 Broadcasts
 
-## Details 
+## 详细描述 
 
-If no permission is set when sending a broadcast Intent, then any unprivileged app can receive the Intent unless it has an explicit destination.
+如果在发送广播Intent时未设置权限，则任何非特权应用程序都可以接收Intent，除非它有明确的目标。
 
-An attacker could take advantage of an Intent that doesn't have any set permissions in the following way:
-- Create a malicious app that includes a component with the same name as a legitimate component
-- As long as that name (or namespace) is not already in use, the malicious app will install on the target device
-- Extract sensitive data from the broadcast Intent sent to that component name"?
+攻击者可以通过以下方式利用没有任何设置权限的Intent：
 
-## Remediation
+- 创建包含与合法组件具有相同名称的组件的恶意应用程序
+- 只要该名称（或命名空间）尚未使用，恶意应用程序将安装在目标设备上
+- 从发送到该组件名称的广播Intent提取敏感数据
 
-Use permissions to protect Intents in your application. Keep in mind that when sending information via a broadcast Intent to a third party component, that component could have been replaced by a malicious install.
+## 建议
 
-## References 
+使用权限来保护应用程序中的Intents。 请记住，当通过广播Intent向第三方组件发送信息时，该组件可能已被恶意安装替换。
+
+## 参考 
 
  * [https://developer.android.com/training/articles/security-tips.html#Permissions](https://developer.android.com/training/articles/security-tips.html#Permissions)
  * [http://shop.oreilly.com/product/0636920022596.do](http://shop.oreilly.com/product/0636920022596.do)

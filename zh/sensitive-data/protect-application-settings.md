@@ -1,12 +1,12 @@
-# Protect Application Settings
+# 保护应用程序设置
 
-## Details 
+## 详细描述 
 
-iOS developers often store application settings in plist files which can be compromised in some situations. Similarly, Android developers often store settings in a shared preferences XML file or SQLite databases, which are not encrypted by default and can be read or even modified with root permissions, or using backup procedures.
+iOS开发人员经常将应用程序设置存储在plist文件中，在某些情况下可能会受到损害。 类似地，Android开发人员通常将设置存储在共享首选项XML文件或SQLite数据库中，这些数据库在默认情况下未加密，可以使用root权限读取或甚至修改，或使用备份。
 
-## Remediation
+## 建议
 
-Compile settings into the code when possible. There is little benefit to configuring an app via plist file on iOS since changes must be bundled and deployed as a new app anyway. Instead, include configuration inside app code which requires more time and skill for attackers to modify.  Don’t store any critical settings in dictionaries or other files unless encrypted first. Ideally, encrypt all configuration files using a master key encrypted with a passphrase that is supplied by the user, or with a key provided remotely when a user logs into a system.
+尽可能将设置编译为代码。 通过plist文件在iOS上配置应用程序没有什么好处，因为更改必须绑定并部署为新的应用程序。 相反，如果将配置包含在应用程序代码中，攻击者需要更多的时间和技能才能修改。 除非先加密不要在字典或其他文件中存储任何关键设置。 理想情况下，使用由用户提供的密码加密的主密钥或用户登录系统时远程提供的密钥加密所有配置文件。
 
 ## CWE/OWASP
 

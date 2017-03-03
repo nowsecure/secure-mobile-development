@@ -1,16 +1,16 @@
-# Avoid Cached Application Snapshots
+# 避免缓存应用程序快照
 
-## Details 
+## 详细描述 
 
-In order to provide the visual transitions in the interface, iOS has been proven to store screenshots as images in the file system portion of the device NAND flash. This occurs when an application suspends (rather than terminates), when either the home button is pressed, or a phone call or other event temporarily suspends the application. These images can often contain user and application data. In one published case, they contained the user’s full name, DOB, address, employer, and credit scores.
+为了提供界面中的视觉过渡，iOS会将屏幕截图作为图像存储在设备NAND闪存的文件系统部分中。 当应用程序暂停（而不是终止）时，当按下Home按钮或电话呼叫或其他事件暂时挂起应用程序时，会发生这种情况。 这些图像通常可以包含用户和应用程序数据。 在一个已发布的案例中，它们包含用户的全名，DOB，地址，雇主和信用评分。
 
-## Remediation
+## 建议
 
-To protect sensitive data, block caching of application snapshots using API configuration or code. 
+要保护敏感数据，请使用API配置或代码阻止应用程序快照的缓存。
 
-When applicationDidEnterBackground: method returns, the snapshot of the application user interface is taken, and it’s used for transition animations and stored in the filesystem. This method should be overridden and all the sensitive information in the user interface should be removed before it returns. This way the snapshot will not contain them.
+当applicationDidEnterBackground：方法运行结束时，iOS将采用应用程序用户界面的快照，并且它用于转换动画并存储在文件系统中。 应该重载此方法，并且在返回之前应删除用户界面中的所有敏感信息。 这样快照就不会包含它们。
 
-## References
+## 参考
 
  * [Managing Your Applications Flow][1]
  

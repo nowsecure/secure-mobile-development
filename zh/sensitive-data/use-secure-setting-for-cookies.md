@@ -1,14 +1,14 @@
-# Use SECURE Setting For Cookies
+# 使用Cookie的安全设置
 
-## Details 
+## 详细描述 
 
-If a cookie is not marked as “Secure,” it may be transmitted over an insecure connection whether or not the session with the host is secure. In other words, it may be be transmitted over an HTTP connection.
+如果Cookie未标记为“Secure”，则无论与主机的会话是否安全，都可能通过不安全的连接进行传输。 换句话说，它可以通过HTTP连接来传输。
 
-In addition, setting the "HTTPOnly" flag on a cookie prevents attacks such as cross-site scripting (XSS), because the cookie cannot be accessed via the client side (e.g., cannot be accessed using a snippet of JavaScript code).
+此外，由于Cookie无法通过客户端访问（例如，无法使用JavaScript代码段访问），因此在Cookie上设置“HTTPOnly”标志可防止跨站点脚本（XSS）等攻击。
 
-## Remediation
+## 建议
 
-The Set-Cookie headers should use the “Secure” and “HTTPOnly” settings. These settings should be applied to all cookies for native and/or web apps.
+Set-Cookie头应该使用“Secure”和“HTTPOnly”设置。 这些设置应适用于本机和/或网络应用程序的所有Cookie。
 
 ## CWE/OWASP 
 

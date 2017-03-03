@@ -1,23 +1,24 @@
-# Avoid Storing Cached Camera Images
+# 避免存储缓存的摄像机图像
 
-Remote-check-deposit apps allow a person to take a picture of a check with their mobile phone's camera and then send the image to their financial institution for deposit into their account.
+远程支票存款应用程序允许一个人用手机的相机拍摄支票的图片，然后将图像发送到他们的金融机构存入他们的帐户。
 
-## Details 
+## 详细描述 
 
-With remote-check-deposit apps, a person can take a picture of a check with their mobile phone's camera and then send the image to their financial institution for deposit into their account.  Many of these apps will retain the check image (or part of it) in the mobile device's NAND memory even after it is deleted.
+使用远程支票存款应用程序，一个人可以用手机的相机拍照支票，然后将图像发送到他们的金融机构存入他们的帐户。 许多这些应用程序将保留检查图像（或其一部分）在移动设备的NAND内存中，即使它被删除。
 
-## Remediation
+## 建议
 
-Do not transmit a check image using non-volatile storage on the device where check image artifacts may be left behind. One possible alternative is to:
-1. Create a SurfaceView that displays a camera preview or live preview of what the camera sensor is seeing
-2. Insert and program a button that when pressed returns the camera preview as a pixel array
-3. Finally, convert the pixel array to bitmap, compress it to a .jpg, encode it to Base64, and submit it to the remote location
+不要在设备上使用非易失性存储器传输支票图像，支票图像可能会残留。 一个可能的替代方案是：
 
-This method will only maintain the image in volatile RAM and prevent the caching of the check image in non-volatile storage.
+1. 创建一个SurfaceView，显示相机预览或实时预览相机传感器所看到的内容
+2. 插入并编程一个按钮，当按下时，将相机预览作为像素阵列返回
+3. 最后，将像素阵列转换为位图，将其压缩为.jpg，将其编码为Base64，并将其提交到远程位置
 
-Specifically with the Android Camera class, the method takePicture can be used specifying a callback when the .jpg is generated using the `Camera.PictureCallback` interface. In particular, we are interested in the method “public void onPictureTaken(byte[] bytes, Camera camera).”
+此方法将只维护易失性内存中的图像，并防止支票图像在非易失性存储器中的缓存。
 
-Using this technique it’s possible to use the “bytes” array content, which will contain the photograph in RAM.
+特别是使用Android Camera类，可以使用方法takePicture指定当使用`Camera.PictureCallback`接口生成.jpg时的回调。 特别是，我们对方法“public void onPictureTaken（byte [] bytes，Camera camera）感兴趣。
+
+使用这种技术，可以使用“bytes”数组内容，其中包含RAM中的照片。
  
 ## CWE/OWASP
 

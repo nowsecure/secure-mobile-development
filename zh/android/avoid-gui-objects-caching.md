@@ -1,20 +1,20 @@
-# Avoid GUI Objects Caching
+# 避免GUI对象缓存
 
-Remote check-deposit apps allow people to take a picture of a check with their device and send it to their financial institution for deposit into an account.
+远程支票存款应用程序允许人们使用他们的设备拍摄支票的照片，并将其发送到其金融机构以存入帐户。
 
-## Details 
+## 详细描述 
 
-Android retains application screens in memory, and multitasking can result in the retention of an entire application in memory (even if the user logs out of their account). This allows an attacker that finds or steals a device to navigate directly to retained screens, which may include sensitive user data as part of the GUI. For example, if a user logs-out of a banking app but doesn't quit or close the app, a screen displaying transaction activity may be retained and viewable to an attacker.
+Android将应用程序屏幕保留在内存中，并且多任务可以导致将整个应用程序保留在内存中（即使用户注销其帐户）。 这允许发现或窃取设备的攻击者直接导航到保留的屏幕，其可以包括作为GUI的一部分的敏感用户数据。 例如，如果用户退出银行应用，但不退出或关闭应用，则可以保留显示交易活动的屏幕，并且攻击者可以看到该屏幕。
 
-## Remediation
+## 建议
 
-To counter this, a developer has three common options:
+为了解决这个问题，开发人员有三个常见的选择：
 
-1. Quit the app entirely when the user logs out. While it's against Android design principles to quit your own app, it's far more secure because quitting the app will destroy any retained GUI screens.
+1. 当用户注销时，完全退出应用程序。 虽然违反Android设计原则退出您自己的应用程序，它是更安全，因为退出应用程序将销毁任何保留的GUI屏幕。
 
-2. Any time an activity is initiated or a screen is accessed, execute a check to determine whether the user is in a logged-in state. If the user is not logged in, present the log-in screen.
+2. 任何时间启动活动或访问屏幕时，请执行检查以确定用户是否处于已登录状态。 如果用户未登录，则显示登录屏幕。
 
-3. Nullify the data on a GUI screen before leaving the screen or logging out.
+3. 在离开屏幕或注销之前，在GUI屏幕上清除数据。
 
 ## CWE/OWASP
 

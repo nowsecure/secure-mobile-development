@@ -1,14 +1,12 @@
-# Use Proper Session Management
+# 使用合适的会话管理
 
-## Details 
+## 详细描述 
 
-Sessions for users are maintained on most apps via a cookie, which can be vulnerable.
-
+大多数应用程序都通过可能容易受到攻击的Cookie来维护用户的会话。
 
 ## Remediation
 
-Web languages (e.g. Java, .NET) offer session management, which is well-developed and security tested. Keep server software up-to-date with security patches. Rolling your own session management is more risky and undertaken only with proper expertise.  Ensure the size of the session cookie is sufficient. Short or predictable session cookies make it possible for an attacker to predict, highjack or perform other attacks against the session. Use high-security settings in session configuration.
-
+Web语言（例如Java，.NET）提供会话管理，这是经过良好开发和安全测试的。 使服务器软件保持最新的安全补丁。 开发您自己的会话管理更有风险，只有在适当的专业知识。 确保会话cookie的大小足够。 短的或可预测的会话cookie使攻击者可能预测，高压或对会话执行其他攻击。 在会话配置中使用高安全性设置。
 
 ## CWE/OWASP
 

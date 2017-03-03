@@ -1,24 +1,24 @@
-# Implement Intents Carefully
+# 谨慎实现 Intents
 
-## Details 
+## 详细描述 
 
-Intents are used for inter-component signaling and can be used
+Intents用于组件间信令，而且可以被用来做以下事情：
 
- * *To start an Activity, typically opening a user interface for an app*
- * *As broadcasts to inform the system and apps of changes*
- * *To start, stop, and communicate with a background service*
- * *To access data via ContentProviders*
- * *As callbacks to handle events*
+ * *启动Activity，通常为应用程序打开用户界面*
+ * *作为广播以通知系统和应用程序的变化*
+ * *开始，停止和与后台服务进行通信*
+ * *通过ContentProvider访问数据*
+ * *作为回调处理事件*
 
-Improper implementation could result in data leakage, restricted functions being called and program flow being manipulated.
+不正确的实现可能导致数据泄露，受限功能被调用和程序流被操纵。
 
-## Remediation
+## 建议
 
- * Components accessed via Intents can be public or private. The default is dependent on the intent-filter and it is easy to mistakenly allow the component to be or become public. It is possible to set component as android:exported=false in the app’s Manifest to prevent this.
+ * 通过Intents访问的组件可以是公共的或私有的。 默认值取决于Intents过滤器，很容易错误地允许组件被公开。 可以在应用程序的Manifest中将组件设置为`android：exported = false`，以防止出现这种情况。
  
- * Public components declared in the Manifest are by default open so any application can access them. If a component does not need to be accessed by all other apps, consider setting a permission on the component declared in the Manifest.
+ * 默认情况下，在清单中声明的公共组件是开放的，所以任何应用程序都可以访问它们。 如果组件不需要被所有其他应用程序访问，请考虑设置对清单中声明的组件的权限。
 
- * Data received by public components cannot be trusted and must be scrutinized.
+ * 公共组件接收的数据不可信任，必须仔细检查。
 
 ## CWE/OWASP
 
