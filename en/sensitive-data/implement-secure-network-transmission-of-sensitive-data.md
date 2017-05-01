@@ -18,5 +18,5 @@ On the server side, consider accepting only strong TLS ciphers and keys and disa
 
 ## CWE/OWASP
 
- * OWASP Mobile Top 10: [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-311 - Missing Encryption of Sensitive Data](http://cwe.mitre.org/data/definitions/311.html), [CWE-319 - Cleartext Transmission of Sensitive Information](http://cwe.mitre.org/data/definitions/319.html)
