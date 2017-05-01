@@ -1,6 +1,6 @@
 # Implement Protections Against Buffer Overflow Attacks
 
-## Details 
+## Details
 
 This best practice covers three iOS code implementations that help developers mitigate the risk of buffer overflow attacks on their app: automatic reference counting (ARC), address space layout randomization (ASLR), and stack-smashing protection.
 
@@ -34,10 +34,9 @@ Implement stack-smashing protection - Compile the application with the  `-fstack
 
   * [Address Space Layout Randomization](https://developer.apple.com/library/prerelease/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW22) - https://developer.apple.com/library/prerelease/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW22
 
-  * [Other Compiler Flags That Affect Security](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW26) - https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW26 
+  * [Other Compiler Flags That Affect Security](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW26) - https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/BufferOverflows.html#//apple_ref/doc/uid/TP40002577-SW26
 
 ## CWE/OWASP
 
-  * OWASP Mobile Top 10: [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
+  * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
   * CWE: [CWE-121 - Stack-based Buffer Overflow](https://cwe.mitre.org/data/definitions/121.html), [CWE-200 - Information Exposure](http://cwe.mitre.org/data/definitions/200.html)
-  

@@ -1,6 +1,6 @@
 # Protect Application Services
 
-## Details 
+## Details
 
 Services are typically used for background processing. Like BroadcastReceivers and application activities, application services can be invoked by external applications and so should be protected by permissions and export flags.
 
@@ -13,26 +13,26 @@ When calling a service with sensitive data, validate that the correct service is
 Here is an example where a custom permission is declared and required to be used when accessing the `com.example.MyService.`
 
 ```xml
-<permission android:name="com.example.mypermission" 
+<permission android:name="com.example.mypermission"
 android:label="my_permission" android:protectionLevel="dangerous"></permission>`
 ```
 ```xml
 <service
 
 	android:name="com.example.MyService"
-	
+
 	android:permission="com.example.mypermission">
-	
+
 	<intent-filter>
-	
+
 		<action android:name="com.example.MY_ACTION" />
-		
+
 	</intent-filter>
-		
+
 </service>
 ```
 
 ## CWE/OWASP
 
- * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
+ * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE-280: Improper Handling of Insufficient Permissions or Privileges](http://cwe.mitre.org/data/definitions/280.html)

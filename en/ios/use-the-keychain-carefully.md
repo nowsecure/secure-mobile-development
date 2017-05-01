@@ -1,6 +1,6 @@
 # Use the Keychain Carefully
 
-## Details 
+## Details
 
 iOS provides the keychain for secure data storage. However, in several scenarios, the keychain can be compromised and subsequently decrypted.
 
@@ -19,12 +19,12 @@ To prevent the exposure of keychain items via iTunes backup, use the ThisDeviceO
 Finally, for highly sensitive data, consider augmenting protections offered by the keychain with application-level encryption. For example, rely upon the user to enter a passphrase to authenticate within the application, and then use that passphrase to encrypt data before storing it into the Keychain.
 
 ## References
- 
+
  * [Keychain Services Programming Guide][1]
-	
+
 ## CWE/OWASP
 
- * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2); [M5 - Poor Authorization and Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2014-M5)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage), [M4 - Insecure Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M4-Insecure_Authentication)
  * [CWE-312: Cleartext Storage of Sensitive Information](http://cwe.mitre.org/data/definitions/312.html)
  * [CWE-522: Insufficiently Protected Credentials](http://cwe.mitre.org/data/definitions/522.html)
 

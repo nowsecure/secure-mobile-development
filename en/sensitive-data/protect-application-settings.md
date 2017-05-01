@@ -1,6 +1,6 @@
 # Protect Application Settings
 
-## Details 
+## Details
 
 iOS developers often store application settings in plist files which can be compromised in some situations. Similarly, Android developers often store settings in a shared preferences XML file or SQLite databases, which are not encrypted by default and can be read or even modified with root permissions, or using backup procedures.
 
@@ -10,5 +10,5 @@ Compile settings into the code when possible. There is little benefit to configu
 
 ## CWE/OWASP
 
- * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2), [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE 312](http://cwe.mitre.org/data/definitions/312.html), [313](http://cwe.mitre.org/data/definitions/313.html)

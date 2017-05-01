@@ -1,6 +1,6 @@
 # Institute Local Session Timeout
 
-## Details 
+## Details
 
 Mobile devices are frequently lost or stolen, and an attacker can take advantage of an active session to access sensitive data, execute transactions, or perform reconnaissance on a device owner’s accounts. In addition, without a proper session timeout, an app may be susceptible to data interception via a man-in-the-middle attack.
 
@@ -10,10 +10,9 @@ Any time the app is not used for more than 5 minutes, terminate the active sessi
 
 After timeout, also discard and clear all memory associated with user data including any master keys use to decrypt that data (see also best practice 2.5 [Securely Store Sensitive Data in RAM](../coding-practices/securely-store-sensitive-data-in-ram.md))
 
-Also, make sure the session timeout occurs on both the client side and the server side to mitigate against an attacker modifying the local timeout mechanism. 
+Also, make sure the session timeout occurs on both the client side and the server side to mitigate against an attacker modifying the local timeout mechanism.
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * OWASP Mobile Top 10: [M9 - Improper Session Handling](https://www.owasp.org/index.php/Mobile_Top_10_2014-M9)
+ * [M6 - Insecure Authorization](https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization)
  * CWE: [CWE-613 - Insufficient Session Expiration](http://cwe.mitre.org/data/definitions/613.html)
- 

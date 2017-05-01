@@ -1,6 +1,6 @@
 # Implement Anti-tamper Techniques
 
-## Details 
+## Details
 
 Attackers can tamper with or install a backdoor on an app, re-sign it and publish the malicious version to third-party app marketplaces. Such attacks typically target popular apps and financial apps.
 
@@ -12,11 +12,11 @@ Use checksums, digital signatures and other validation mechanisms to help detect
 
 On Android, the public key used to sign an app can be read from the app’s certificate and used to verify the application was signed with the developer’s private key. Using the PackageManager class, it’s possible to retrieve the signatures of our application and then compare them with the correct value. If someone has tampered with or re-signed the application, the comparison will fail resulting in the detection of tampering with the application.
 
-## References 
+## References
 
  * Android - [https://gist.github.com/scottyab/b849701972d57cf9562e](https://gist.github.com/scottyab/b849701972d57cf9562e)
- 
+
 ## CWE/OWASP
 
- * [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
+ * [M9 - Reverse Engineering](https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering), [M8 - Code Tampering](https://www.owasp.org/index.php/Mobile_Top_10_2016-M8-Code_Tampering)
  * [CWE-354: Improper Validation of Integrity Check Value](http://cwe.mitre.org/data/definitions/354.html)

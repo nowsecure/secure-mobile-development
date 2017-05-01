@@ -1,6 +1,6 @@
 # Properly Configure Server-side SSL
 
-## Details 
+## Details
 
 Many web servers allow lower encryption settings, such as the very weak, export-grade 40-bit encryption. Implement a strong cipher suite to protect information used in creating shared keys, encrypting messages between clients and servers, and generating message hashes and signatures that ensure the integrity of those messages. Also be sure to disable weak protocols.
 
@@ -27,11 +27,11 @@ Avoid weak protocols, such as:
 
 Reference the OWASP [Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet) for more information about how to securely design and configure transport layer security for an app.
 
-## References 
+## References
 
 * [Why Android SSL was downgraded from AES256-SHA to RC4-MD5 in late 2010](http://op-co.de/blog/posts/android_ssl_downgrade/) - http://op-co.de/blog/posts/android_ssl_downgrade/
 
 ## CWE/OWASP
 
- * OWASP Mobile Top 10: [M1 - Weak Server Side Controls](https://www.owasp.org/index.php/Mobile_Top_10_2014-M1)
+ * [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-326 - Inadequate Encryption Strength](http://cwe.mitre.org/data/definitions/326.html)

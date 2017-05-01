@@ -1,6 +1,6 @@
 # Implement Secure Network Transmission Of Sensitive Data
 
-## Details 
+## Details
 
 Unlike web browsers, mobile devices typically do not disclose whether or not an app uses SSL/TLS to secure the transmission of data, and so app users simply have to trust that the app’s developer has implemented network encryption.
 
@@ -14,9 +14,9 @@ Use SSL/TLS either with standard trust validation, or, for increased security, i
 
 To prevent the interception of highly sensitive values (e.g., login IDs, passwords, PINs, account numbers, etc.) via a compromised SSL/TLS connection, implement additional encryption in transit. Encrypt highly sensitive values with AES (also known as Rijndael) using a key size of 256. For hashing purposes, use an algorithm such as SHA-256 or higher.
 
-On the server side, consider accepting only strong TLS ciphers and keys and disabling lower levels of encryption such as export-grade 40-bit encryption (see also best practice 8.2 [Properly Configure Server-Side SSL](../servers/server-side-ssl-configuration.md)) 
+On the server side, consider accepting only strong TLS ciphers and keys and disabling lower levels of encryption such as export-grade 40-bit encryption (see also best practice 8.2 [Properly Configure Server-Side SSL](../servers/server-side-ssl-configuration.md))
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * OWASP Mobile Top 10: [M3- Insufficient Transport Layer Protection](https://www.owasp.org/index.php/Mobile_Top_10_2014-M3)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-311 - Missing Encryption of Sensitive Data](http://cwe.mitre.org/data/definitions/311.html), [CWE-319 - Cleartext Transmission of Sensitive Information](http://cwe.mitre.org/data/definitions/319.html)

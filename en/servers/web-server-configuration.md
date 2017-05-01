@@ -1,6 +1,6 @@
 # Implement Proper Web Server Configuration
 
-## Details 
+## Details
 
 Certain settings on a web server can increase security. One commonly overlooked vulnerability on a web server is information disclosure. Information disclosure can lead to serious problems, because every piece of information attackers can gain from a server makes staging an attack easier.
 
@@ -13,8 +13,8 @@ Another simple way to reduce information disclosure is to return the minimum amo
 One configuration change in servers that can greatly improve security is to change any default directories. Attackers frequently search the Internet for sites with “low-hanging fruit,” such as default logins, easily guessable admin interfaces, and simple naming schemes for “hidden” directories. It is a good policy to obfuscate the locations of any sensitive pages on a server that need to be web-accessible.
 
 Administration or other restricted areas should not be publicly web-accessible unless absolutely necessary, and must be resistant to brute force attacks. HTTP authentication or forms authentication without lockout protection can (and will) be attacked by brute force.
- 
+
 ## CWE/OWASP
 
- * [M1 - Weak Server Side Controls](https://www.owasp.org/index.php/Mobile_Top_10_2014-M1)
+ * [M10 - Extraneous Functionality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M10-Extraneous_Functionality)
  * [CWE 203](http://cwe.mitre.org/data/definitions/203.html)

@@ -2,7 +2,7 @@
 
 Oftentimes, iOS developers will store application settings in plist files which can be compromised in some situations.
 
-## Details 
+## Details
 
 When an application is in use, user- or application-specific data may be stored in RAM and not properly cleared when the user logs out or the session times out. Because Android stores an application in memory (even after use) until the memory is reclaimed, encryption keys may remain in memory. An attacker who finds or steals the device can attach a debugger and dump the memory from the application, or load a kernel module to dump the entire contents of RAM.
 
@@ -18,7 +18,7 @@ There are some recommendations in order to clear those buffers bypassing the com
 
 ## CWE/OWASP
 
- * [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE-316: Cleartext Storage of Sensitive Information in Memory](http://cwe.mitre.org/data/definitions/316.html)
  * [CWE-200: Information Exposure](http://cwe.mitre.org/data/definitions/200.html)
  * [CVE-2014-0160 Heartbleed](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160)

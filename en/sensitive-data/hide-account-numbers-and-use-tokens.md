@@ -1,6 +1,6 @@
 # Hide Account Numbers and Use Tokens
 
-## Details 
+## Details
 
 Many apps store complete account numbers in various screens.
 
@@ -11,9 +11,13 @@ Given the widespread use of mobile apps in public places, displaying partial num
 In iOS, if you realize
 
 ```
-> - (BOOL)textField:(UITextField *)textField 
+> - (BOOL)textField:(UITextField *)textField
 
 > shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 ```
 
 as part of the delegate for the text field, you can change the visibility of the entered text.
+
+## CWE/OWASP
+
+* [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
