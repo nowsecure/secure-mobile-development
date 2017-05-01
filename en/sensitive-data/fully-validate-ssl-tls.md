@@ -8,7 +8,7 @@ An application not properly validating its connection to the server is susceptib
 
 ### Common Mistake: Accepting self-signed certificates
 
-Developers may disable certificate validation in apps for a variety of reasons. One example is when a developer needs to test code on the production server, but does not have a domain certificate for the test environment. In this situation, the developer may add code to the networking library to accept all certificates as valid. Accepting all certificates as valid, however, allows an attacker to execute an MITM attack on the app by simply using a self-signed certificate. This approach to developing an app nullifies the effect of SSL/TLS and provides no value over an unencrypted, plaintext connection (other than requiring an active MITM attack to view and modify traffic whereas a plaintext connection can be monitored passively). 
+Developers may disable certificate validation in apps for a variety of reasons. One example is when a developer needs to test code on the production server, but does not have a domain certificate for the test environment. In this situation, the developer may add code to the networking library to accept all certificates as valid. Accepting all certificates as valid, however, allows an attacker to execute an MITM attack on the app by simply using a self-signed certificate. This approach to developing an app nullifies the effect of SSL/TLS and provides no value over an unencrypted, plaintext connection (other than requiring an active MITM attack to view and modify traffic whereas a plaintext connection can be monitored passively).
 
 Below is an example of vulnerable Android code that accepts all SSL/TLS certificates as valid:
 
@@ -66,7 +66,7 @@ Below is an example of vulnerable Android code that sets a permissive hostname v
 For any app that handles highly sensitive data, use certificate pinning to protect against MITM attacks. The majority of apps have defined locations to which they connect (their backend servers) and inherently trust the infrastructure to which they connect, therefore it’s acceptable (and often more secure) to use a “private” public-key infrastructure, separate from public certificate authorities. With this approach, an attacker needs the private keys from the server side to perform a MITM attack against a device for which they do not have physical access.
 If certificate pinning cannot be implemented for any app functionality that handles highly sensitive data, implement proper certificate validation, which consists of two parts:
 
-1. **Certificate validation:** Certificates presented to the app must be fully validated by the app and be signed by a trusted root CA. 
+1. **Certificate validation:** Certificates presented to the app must be fully validated by the app and be signed by a trusted root CA.
 2. **Hostname validation:** The app must check and verify that the hostname (Common Name or CN) extracted from the certificate matches that of the host with which the app intends to communicate.
 
 ### For Android
@@ -104,9 +104,9 @@ In addition, [TrustKit](https://github.com/datatheorem/TrustKit), an open-source
 
 ## References
 
-* [Your app shouldn’t suffer SSL’s problems](https://moxie.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/) - https://moxie.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/ 
+* [Your app shouldn’t suffer SSL’s problems](https://moxie.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/) - https://moxie.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/
 
 ## CWE/OWASP
 
- * OWASP Mobile Top 10: [M3- Insufficient Transport Layer Protection](https://www.owasp.org/index.php/Mobile_Top_10_2014-M3)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-319 - Cleartext Transmission of Sensitive Information](http://cwe.mitre.org/data/definitions/319.html)

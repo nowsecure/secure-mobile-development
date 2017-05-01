@@ -1,6 +1,6 @@
 # Implement Content Providers Carefully
 
-## Details 
+## Details
 
 Content providers allow apps to share data using a URI-addressing scheme and relational database model. They can also be used to access files via the URI scheme.
 
@@ -16,5 +16,5 @@ Content providers that serve files based on a file name being passed to the prov
 
 ## CWE/OWASP
 
- * [M7 - Client Side Injection](https://www.owasp.org/index.php/Mobile_Top_10_2014-M7)
+ * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE 926: Improper Export of Android Application Components](http://cwe.mitre.org/data/definitions/926.html)

@@ -1,6 +1,6 @@
 # Follow WebView Best Practices
 
-## Details 
+## Details
 
 WebViews can introduce a number of security concerns and should be implemented carefully. In particular, a number of exploitable vulnerabilities arising from the use of the addJavscriptInterface API have been discovered.
 
@@ -12,12 +12,12 @@ Disallow the loading of content from third-party hosts. This can be difficult to
 
 Sample code [https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a](https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a)
 
-## References 
+## References
 
  * [http://labs.mwrinfosecurity.com/blog/2012/04/23/adventures-with-android-webviews/](http://labs.mwrinfosecurity.com/blog/2012/04/23/adventures-with-android-webviews/)
  * [https://developer.android.com/training/articles/security-tips.html#WebView](https://developer.android.com/training/articles/security-tips.html#WebView)
- 
+
 ## CWE/OWASP
 
- * [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
+ * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE-79: Improper Neutralization of Input During Web Page Generation (Cross-site Scripting)](http://cwe.mitre.org/data/definitions/79.html)

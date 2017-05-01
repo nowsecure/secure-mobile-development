@@ -14,5 +14,5 @@ Do not use modes such as 0666, 0777, and 0664 with the chmod binary or syscalls 
 
 ## CWE/OWASP
 
- * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE 280](http://cwe.mitre.org/data/definitions/280.html)

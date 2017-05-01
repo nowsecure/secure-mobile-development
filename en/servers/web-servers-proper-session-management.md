@@ -1,6 +1,6 @@
 # Use Proper Session Management
 
-## Details 
+## Details
 
 Sessions for users are maintained on most apps via a cookie, which can be vulnerable.
 
@@ -12,5 +12,5 @@ Web languages (e.g. Java, .NET) offer session management, which is well-develope
 
 ## CWE/OWASP
 
- * [M9 - Improper Session Handling](https://www.owasp.org/index.php/Mobile_Top_10_2014-M9)
+ * [M6 - Insecure Authorization](https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization)
  * [CWE 613](http://cwe.mitre.org/data/definitions/613.html)

@@ -1,6 +1,6 @@
 # Implement Secure Data Storage
 
-## Details 
+## Details
 
 Storing data securely on a mobile device requires proper technique. Whenever possible, ***simply do not store/cache data.*** This is the most sure way to avoid data compromise on the device.
 
@@ -41,7 +41,7 @@ The Data Protection APIs built into iOS, combined with a complex passphrase, can
  * [Android/iOS Full Database Encryption](http://sqlcipher.net/) - http://sqlcipher.net/
  * [Android Storage Options](http://developer.android.com/guide/topics/data/data-storage.html) - http://developer.android.com/guide/topics/data/data-storage.html
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * OWASP Mobile Top 10: [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2)
+ * OWASP Mobile Top 10: [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-312 - Cleartext Storage of Sensitive Information](http://cwe.mitre.org/data/definitions/312.html), [CWE-313 - Cleartext Storage in a File or on Disk](http://cwe.mitre.org/data/definitions/313.html), [CWE-522 - Insufficiently Protected Credentials](http://cwe.mitre.org/data/definitions/522.html), [CWE-215 - Information Exposure Through Debug Information](http://cwe.mitre.org/data/definitions/215.html)

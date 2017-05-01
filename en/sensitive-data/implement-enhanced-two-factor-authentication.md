@@ -1,6 +1,6 @@
 # Implement Enhanced / Two-Factor Authentication
 
-## Details 
+## Details
 
 Weak or non-existent authentication can grant an attacker unauthorized access to an app.
 
@@ -19,7 +19,7 @@ Options for enhanced authentication include:
 
 For the highest level of security, use one-time passwords that require the user to not only possess the correct credentials, but also a physical token including the one time password.
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * OWASP Mobile Top 10: [M5 - Poor Authorization and Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2014-M5)
+ * [M4 - Insecure Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M4-Insecure_Authentication)
  * CWE: [CWE-308: Use of Single-factor Authentication](http://cwe.mitre.org/data/definitions/308.html)

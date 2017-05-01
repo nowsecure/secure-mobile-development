@@ -1,6 +1,6 @@
 # Avoid Simple Logic
 
-## Details 
+## Details
 
 Simple logic tests in code are more susceptible to attack. Example:
 
@@ -20,9 +20,9 @@ In the same vein, simple logic variables stored in an object can be easily manip
 session.trusted = TRUE
 ```
 
-Such values can be both read and written to by an attacker within the instance of a class currently in use by the application. On iOS by manipulating the Objective-C runtime, these variables can be manipulated so that the next time they are referenced by the application, any manipulated values will be read instead. 
+Such values can be both read and written to by an attacker within the instance of a class currently in use by the application. On iOS by manipulating the Objective-C runtime, these variables can be manipulated so that the next time they are referenced by the application, any manipulated values will be read instead.
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8); [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10)
+ * [M8 - Code Tampering](https://www.owasp.org/index.php/Mobile_Top_10_2016-M8-Code_Tampering), [M9 - Reverse Engineering](https://www.owasp.org/index.php/Mobile_Top_10_2016-M9-Reverse_Engineering)
  * [CWE 200](http://cwe.mitre.org/data/definitions/200.html)

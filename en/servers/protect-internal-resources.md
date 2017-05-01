@@ -1,6 +1,6 @@
 # Protect Internal Resources
 
-## Details 
+## Details
 
 Resources for internal use such as administrator login forms frequently leverage authentication that is not resistant to brute force. For example HTTP or forms authentication without lockout. Compromise of administration or other internal resources can lead to extensive data loss and other damage.
 
@@ -10,5 +10,5 @@ Such resources should be blocked from external access.   Any resource that does 
 
 ## CWE/OWASP
 
- * [M1 - Weak Server Side Controls](https://www.owasp.org/index.php/Mobile_Top_10_2014-M1)
+ * [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE 200 - Multiple CWE's](http://cwe.mitre.org/data/definitions/200.html)

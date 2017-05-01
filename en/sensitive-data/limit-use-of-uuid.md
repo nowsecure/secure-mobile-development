@@ -1,5 +1,5 @@
 # Limit Use of UUID
-## Details 
+## Details
 
 Most mobile devices have a unique ID, also called a Universal Unique Identifier (UUID), assigned at the time of manufacture for identification purposes. For example, iOS devices are assigned what's called a Unique Device Identifier (UDID). The ability to uniquely identify a device is often important to procure, manage and secure data. Developers quickly adopted the UUID and UDID for device identification, which resulted in it becoming a foundation of security for many systems.
 
@@ -20,8 +20,8 @@ To protect user privacy while preserving advertising capabilities, Apple recomme
 ## References
 
  * [Unique Identifiers in iOS](https://possiblemobile.com/2013/04/unique-identifiers/)
- 
+
 ## CWE/OWASP
 
- * [M5 - Poor Authorization and Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2014-M5)
+ * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE-200: Information Exposure](http://cwe.mitre.org/data/definitions/200.html)

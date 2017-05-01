@@ -1,6 +1,6 @@
 # Avoid Caching HTTP(S) Requests/Responses
 
-## Details 
+## Details
 
 By default, iOS’s `NSURLRequest` will cache responses in the Cache.db file. To prevent this insecure behavior, a developer must explicitly disable caching.
 
@@ -17,9 +17,8 @@ Developers can find additional methods for disabling the caching of HTTP(S) requ
 ## References
 
  * [Understanding cache access](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/Concepts/CachePolicies.html) - https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/Concepts/CachePolicies.html
- 
-## CWE/OWASP 
 
- * OWASP Mobile Top 10: [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2), [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
+## CWE/OWASP
+
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * CWE: [CWE-312 - Cleartext Storage of Sensitive Information](http://cwe.mitre.org/data/definitions/312.html), [CWE-313 - Cleartext Storage in a File or on Disk](http://cwe.mitre.org/data/definitions/313.html), [CWE-522 - Insufficiently Protected Credentials](http://cwe.mitre.org/data/definitions/522.html)
- 

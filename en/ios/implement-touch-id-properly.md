@@ -1,6 +1,6 @@
 # Implement Touch ID Properly
 
-## Details 
+## Details
 
 Touch ID is commonly known for its use in allowing a user to authenticate to and unlock their device without entering a passcode. Some developers also use Touch ID to allow the user to authenticate to their app using a stored device fingerprint.
 
@@ -18,8 +18,8 @@ When using Touch ID for authentication, store the app’s secret in the Keychain
 ## References
 
  * [KeychainTouchID: Using Touch ID with Keychain and LocalAuthentication](https://developer.apple.com/library/content/samplecode/KeychainTouchID/Introduction/Intro.html) - https://developer.apple.com/library/content/samplecode/KeychainTouchID/Introduction/Intro.html
- 
-## CWE/OWASP 
 
- * OWASP Mobile Top 10: [M5 - Poor Authorization and Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2014-M5)
+## CWE/OWASP
+
+ * [M4 - Insecure Authentication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M4-Insecure_Authentication), [M6 - Insecure Authorization](https://www.owasp.org/index.php/Mobile_Top_10_2016-M6-Insecure_Authorization)
  * CWE: [CWE-288 - Authentication Bypass Using an Alternate Path or Channel](http://cwe.mitre.org/data/definitions/288.html)

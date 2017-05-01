@@ -1,6 +1,6 @@
 # Carefully Manage Debug Logs
 
-## Details 
+## Details
 
 Debug logs are generally designed to be used to detect and correct flaws in an application. These logs can leak sensitive information that may help an attacker create a more powerful attack.
 
@@ -16,7 +16,7 @@ In Android one can also can leverage ProGuard or DexGuard to completely remove t
 In *proguard.cfg,* add the following snippet:
 
 ```
-> -assumenosideeffects class android.util.Log { 
+> -assumenosideeffects class android.util.Log {
 		> public static *** d(...);
 		> public static *** v(...);
 		> public static *** i(...);
@@ -38,7 +38,7 @@ becomes effectively a no-op.
 >	;
 ```
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * [M10 - Lack of Binary Protections](https://www.owasp.org/index.php/Mobile_Top_10_2014-M10); [M8 - Security Decisions via Untrusted Inputs](https://www.owasp.org/index.php/Mobile_Top_10_2014-M8)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage), [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE 215](http://cwe.mitre.org/data/definitions/215.html)

@@ -1,6 +1,6 @@
 # Be Aware of Copy and Paste"
 
-## Details 
+## Details
 
 Both iOS and Android support copy/paste. Sensitive data may be stored, recoverable, or could be modified from the clipboard in clear text, regardless of whether the source of the data was initially encrypted. If it is in plaintext at the moment the user copies it, it will be in plaintext when other applications access the clipboard.
 
@@ -12,8 +12,7 @@ Where appropriate, disable copy/paste for areas handling sensitive data. Elimina
 
 In addition, it can be interesting to clear the clipboard after taking the contents, to avoid other apps read them and leak what the user is doing.
 
-## CWE/OWASP 
+## CWE/OWASP
 
- * [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
+ * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
  * [CWE 200](http://cwe.mitre.org/data/definitions/200.html)
- 

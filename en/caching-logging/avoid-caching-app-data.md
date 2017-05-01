@@ -1,6 +1,6 @@
 # Avoid Caching App Data
 
-## Details 
+## Details
 
 Data can be captured in a variety of artifacts – many unintended. Developers often overlook some of the ways data can be stored including log/debug files, cookies, web history, web cache, property lists, files and SQLite databases. Storing data securely on a mobile device requires proper technique. Whenever possible, ***simply do not store/cache data.*** This is the most sure way to avoid data compromise on the device.
 
@@ -16,6 +16,5 @@ Prevent HTTP caching. Developers can configure iOS and Android to not cache web 
 
 ## CWE/OWASP
 
- * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M2), [M4 - Unintended Data Leakage](https://www.owasp.org/index.php/Mobile_Top_10_2014-M4)
+ * [M2 - Insecure Data Storage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE 312](http://cwe.mitre.org/data/definitions/312.html), [313](http://cwe.mitre.org/data/definitions/313.html), [522](http://cwe.mitre.org/data/definitions/522.html), [200](http://cwe.mitre.org/data/definitions/200.html)
-
