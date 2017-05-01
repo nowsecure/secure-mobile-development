@@ -1,0 +1,212 @@
+/* FYI: requires SUPER specific selectors to style w/out !important */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Typography */
+h1 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.625em;
+  color: #0099ff;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #0099ff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.125em;
+  line-height: 2.063em;
+  color: #999cab;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: .75em;
+  line-height: 1em;
+  color: #999cab;
+  letter-spacing: 1px;
+}
+
+/* Links */
+
+/* The edit page plugin cuts off almost all of the title so it's best to hide rn */
+.book .book-header h1 a {
+  display: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Targets links in lists and copy */
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #0099ff;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:visited {
+  text-decoration: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+  color: #33ccff;
+  text-decoration: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:active {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+/* Sidebar */
+.book .book-summary ul.summary {
+  background: #F5FCFF;
+}
+
+.book .book-summary ul.summary li.divider {
+  background: #F5FCFF;
+}
+
+/* Top left link */
+.book .book-summary ul.summary li a.custom-link {
+  margin: 20px 10px 10px 10px;
+  background: url("../assets/logo.svg") no-repeat;
+  background-position: left center;
+  background-size: 200px;
+  text-indent: -999px;
+}
+
+/* main chapter title */
+.book .book-summary ul.summary li.chapter a {
+  color: #999cab;
+  font-weight: 700;
+}
+
+.book .book-summary ul.summary ul.articles a {
+  font-weight: 400;
+}
+
+/* Sidebar */
+.book .book-summary {
+  border-right: none;
+}
+
+.book .book-summary ul.summary li a:visited {
+  color: #999cab;
+}
+
+.book .book-summary ul.summary li.active>a {
+  color: #33ccff;
+}
+
+.book .book-summary ul.summary li a:hover {
+  color: #262a48;
+}
+
+/* Gitbook link */
+.book .book-summary ul.summary li a.gitbook-link {
+  color: #cccdd5;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.book .book-summary ul.summary li a.gitbook-link:visited {
+  color: #cccdd5;
+}
+
+/* Change page */
+.book .book-body .navigation.navigation-prev:hover,
+.book .book-body .navigation.navigation-next:hover {
+  background: #f7f7f7;
+}
+
+/* Bump down sup num in endnotes/footnotes */
+#endnotes ~ blockquote sup {
+  top: 0;
+  font-weight: 700;
+}
+
+#footnotes ~ blockquote sup {
+  top: 0;
+  font-weight: 700;
+}
+
+/* Copy lists */
+.book .book-body .page-wrapper .page-inner section.normal ul li {
+  list-style: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal ul li:before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -19px;
+  top: -8px;
+  color: #33ccff;
+  font-size: 26px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal ol li {
+    list-style-type: none;
+    counter-increment: list;
+    position: relative;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal ol li:after {
+    content: counter(list) ".";
+    position: absolute;
+    font-weight: 700;
+    left: -2.5em;
+    width: 2em;
+    text-align: right;
+    color:  #33ccff;
+    top: 0;
+}
+
+/* Misc */
+.fa-check:before {
+  display: none;
+}
+
+/* Temp & wonky CTAs, custom plugin required. Don't forget to display: none in PDF */
+.cta-banner .cta-banner-pdf,
+.cta-banner .cta-banner-update {
+  text-align: center;
+  color: #CCCCCC !important;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.cta-banner .cta-banner-pdf:hover,
+.cta-banner .cta-banner-update:hover {
+  color: gray !important;
+}
+
+.cta-banner .cta-banner-pdf {
+  padding-left: 0;
+  margin-right: 30px;
+}
+
+.fa-bell-o,
+.fa-file-pdf-o {
+  padding-left: 10px;
+}
+/* End CTAs */

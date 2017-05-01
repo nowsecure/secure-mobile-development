@@ -1,0 +1,126 @@
+/* Requires different selectors than site */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Typography */
+h1 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.625em;
+  color: #0099ff;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #0099ff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.125em;
+  line-height: 2.063em;
+  color: #999cab;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: .75em;
+  line-height: 1em;
+  color: #999cab;
+  letter-spacing: 1px;
+}
+
+.section.toc {
+  color: #999cab;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li:before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  top: 0;
+  color: #33ccff;
+  font-size: 12px;
+}
+
+ol li {
+  list-style-type: none;
+  counter-increment: list;
+  position: relative;
+}
+
+ol li:after {
+  content: counter(list) ".";
+  position: absolute;
+  font-weight: 700;
+  left: -2.5em;
+  width: 2em;
+  text-align: right;
+  color:  #33ccff;
+  top: 0;
+}
+
+.section.toc ol li:after {
+  display: none;
+}
+
+a:link:after,
+a:visited:after,
+a:hover:after,
+a:active:after {
+	content: " <" attr(href) "> ";
+	color: #0099ff;
+	font-weight: normal;
+}
+
+.pdf-header:after {
+  border-bottom: 1px solid gray;
+  color: #CCCCCC;
+}
+/*
+.pdf-footer {
+
+}
+*/
+
+#endnotes ~ blockquote sup {
+  position: relative;
+  top: 5px;
+}
+
+#footnotes ~ blockquote sup {
+  position: relative;
+  top: 5px;
+}
+
+/* Do not display temp CTAs in md files */
+.cta-banner .cta-banner-pdf,
+.cta-banner .cta-banner-update {
+  display: none;
+}
+
+.fa-bell-o,
+.fa-file-pdf-o {
+  display: none;
+}
