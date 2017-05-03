@@ -9,7 +9,7 @@ Storing data securely on a mobile device requires proper technique. Whenever pos
 Do not store sensitive data where possible. Options to reduce the storage of user information include:
 
 * Transmit and display but do not persist to memory. This requires special attention as well, to ensure that an analog leak does not present itself where screenshots of the data are written to disk.
-* Store only in RAM (clear at application close).
+* Store only in RAM and clear at application close (see also best practice 2.5 [Securely Store Sensitive Data in RAM](/coding-practices/securely-store-sensitive-data-in-ram.md))
 
 ### Additional Layered Encryption
 If storing sensitive data on the device is an application requirement, you should add an additional layer of verified, third-party encryption (e.g., [SQLCipher](https://www.zetetic.net/sqlcipher/)) to the data as device encryption is not sufficient.
