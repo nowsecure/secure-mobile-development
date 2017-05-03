@@ -23,5 +23,5 @@ For apps running on iOS 9.0 or higher, best practice is to enable ATS globally b
 
 ## CWE/OWASP
 
- * [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
+ * OWASP Mobile Top 10: [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M3-Insecure_Communication)
  * CWE: [CWE-319 - Cleartext Transmission of Sensitive Information](http://cwe.mitre.org/data/definitions/319.html)
