@@ -9,7 +9,7 @@ Storing data securely on a mobile device requires proper technique. Whenever pos
 Do not store sensitive data where possible. Options to reduce the storage of user information include:
 
 * Transmit and display but do not persist to memory. This requires special attention as well, to ensure that an analog leak does not present itself where screenshots of the data are written to disk.
-* Store only in RAM and clear at application close (see also best practice 2.5 [Securely Store Sensitive Data in RAM](/coding-practices/securely-store-sensitive-data-in-ram.md))
+* Store only in RAM and clear at application close (see also best practice 2.5 [Securely Store Sensitive Data in RAM](secure-mobile-development/en/coding-practices/securely-store-sensitive-data-in-ram.md))
 
 ### Additional Layered Encryption
 If storing sensitive data on the device is an application requirement, you should add an additional layer of verified, third-party encryption (e.g., [SQLCipher](https://www.zetetic.net/sqlcipher/)) to the data as device encryption is not sufficient.
@@ -34,7 +34,7 @@ Also note that using the standard cryptographic provider “AES” will often de
 
 ### iOS
 
-The Data Protection APIs built into iOS, combined with a complex passphrase, can provide an additional layer of data protection, but are not as secure as implementing additional, third-party verified cryptography. To leverage this, files must be specifically marked for protection (see best practice 6.1 [Use the Keychain Carefully](/iOS/use-the-keychain-carefully)). Any data not specifically encrypted using Apple’s data protection APIs is stored unencrypted.
+The Data Protection APIs built into iOS, combined with a complex passphrase, can provide an additional layer of data protection, but are not as secure as implementing additional, third-party verified cryptography. To leverage this, files must be specifically marked for protection (see best practice 6.1 [Use the Keychain Carefully](secure-mobile-development/en/iOS/use-the-keychain-carefully)). Any data not specifically encrypted using Apple’s data protection APIs is stored unencrypted.
 
 ## References
 
