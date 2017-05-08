@@ -33,5 +33,5 @@ Reference the OWASP [Transport Layer Protection Cheat Sheet](https://www.owasp.o
 
 ## CWE/OWASP
 
- * [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
+ * OWASP Mobile Top 10: [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M3-Insecure_Communication)
  * CWE: [CWE-326 - Inadequate Encryption Strength](http://cwe.mitre.org/data/definitions/326.html)
