@@ -4,7 +4,7 @@ At NowSecure we spend a lot of time attacking mobile apps - hacking, breaking en
 
 ## Using this Guide
 
-This guide gives specific recommendations to use during your development process. The descriptions of attacks and security recommendations in this report are not exhaustive or perfect, but you will get practical advice that you can use to make your apps more secure.
+This guide gives specific recommendations to use during your development process. The descriptions of attacks and security recommendations in this report are not exhaustive or perfect, but you will get practical advice that you can use to make your apps more secure. The best way to verify that your app follows secure mobile development best practices is to perform security assessments of the app, which can include automated mobile app security testing, [fuzzing](https://www.owasp.org/index.php/Fuzzing), manual penetration testing, and more.
 
 We revise our best practices periodically and invite [contributions](https://github.com/nowsecure/secure-mobile-development/pulls), and the updated guide is published [here](https://books.nowsecure.com/secure-mobile-development/) as changes are accepted into the main repository.
 
