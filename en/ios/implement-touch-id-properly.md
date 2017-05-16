@@ -6,10 +6,10 @@ Touch ID is commonly known for its use in allowing a user to authenticate to and
 
 When a developer implements Touch ID in their app, they typically do so in one of two ways:
 
-1. Using only the Local Authentication framework to authenticate the user
-  1. This method leaves the authentication mechanism vulnerable to bypass
-  2. An attacker can modify the local check at runtime, or by patching the binary. This is done by overriding the `LAContextevaluatePolicy:localizedReason:reply` method implementation
-2. Using Keychain access control lists (ACLs)
+1. Using only the Local Authentication framework to authenticate the user.
+    * This method leaves the authentication mechanism vulnerable to bypass.
+    * An attacker can modify the local check at runtime, or by patching the binary. This is done by overriding the `LAContextevaluatePolicy:localizedReason:reply` method implementation.
+2. Using Keychain access control lists (ACLs).
 
 ## Remediation
 
