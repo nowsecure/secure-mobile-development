@@ -12,3 +12,4 @@
 * [7.11 Avoid GUI Objects Caching](avoid-gui-objects-caching.md)
 * [7.12 Sign Android APKs](android-apk-signing.md)
 * [7.13 Request Android permissions carefully](request-permissions-carefully.md)
+* [7.14 Set the "usesCleartextTraffic" flag to false](set-usescleartexttraffic-to-false.md)
