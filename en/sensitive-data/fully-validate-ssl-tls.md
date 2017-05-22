@@ -1,10 +1,10 @@
-# Fully Validate SSL/TLS
+# 3.3 Fully Validate SSL/TLS
 
 Many apps do not properly validate SSL/TLS certificates, leaving them vulnerable to man-in-the-middle (MITM) attacks. If an app fails to properly validate its connection to the server, the app is susceptible to an MITM attack by a privileged network attacker. This type of attack gives the culprit the ability to capture, view, and modify traffic sent and received between the app and the server.
 
 ## Details
 
-An application not properly validating its connection to the server is susceptible to a man-in-the-middle attack by a priviledged network attacker.  This means that an attacker would be able to capture, view, and modify traffic sent and received between the application and the server.
+An application not properly validating its connection to the server is susceptible to a man-in-the-middle attack by a privileged network attacker.  This means that an attacker would be able to capture, view, and modify traffic sent and received between the application and the server.
 
 ### Common Mistake: Accepting self-signed certificates
 
@@ -70,6 +70,10 @@ If certificate pinning cannot be implemented for any app functionality that hand
 2. **Hostname validation:** The app must check and verify that the hostname (Common Name or CN) extracted from the certificate matches that of the host with which the app intends to communicate.
 
 ### For Android
+
+Android 7.0 (API level 24) has introduced features that affect certificate pinning and validation. Android 7.0 will only trust a preselected list of certificate authorities (CAs) maintained by the Android Open Source Project and will not trust custom CAs or CAs added by a user.
+
+Developers can, however, direct Android 7.0 to maintain trust with a custom CA throughout the entire app or specific domains using the Network Security Configuration file. Developers can also use the Network Security Configuration file for certificate pinning (see [Android documentation about the Network Security Configuration](https://developer.android.com/training/articles/security-config.html) feature.
 
 Pinning certificates to a default Apache HTTP client shipped with Android consists of obtaining a certificate for the desired host, transforming the cert in .bks format, then pinning the cert to an instance of `DefaultHttpClient`. BKS keystores are usually included within the assets/raw directory of the app’s APK file.
 
