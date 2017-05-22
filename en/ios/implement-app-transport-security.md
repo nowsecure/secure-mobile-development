@@ -11,11 +11,12 @@ Implementing ATS includes a couple of options:
 
 ## Remediation
 
-For apps running on iOS 9.0 or higher, best practice is to enable ATS globally by linking to the iOS 9.0 or later SDK and *NOT* setting the `NSAllowsArbitraryLoads` key to `Yes` or `True`.  Apple currently allows developers to include exceptions for any domains for which TLS cannot be enforced. Exceptions can be made using the `NSExceptionAllowsInsecureHTTPLoads` or `NSThirdPartyExceptionAllowsInsecureHTTPLoads` keys. It is important to note that beginning in January 2017, Apple will require appropriate justification from developers for any exceptions declared inside the application (during App Store review). Otherwise, all communications must use ATS.
+For apps running on iOS 9.0 or higher, best practice is to enable ATS globally by linking to the iOS 9.0 or later SDK and *NOT* setting the `NSAllowsArbitraryLoads` key to `Yes` or `True`.  Apple currently allows developers to include exceptions for any domains for which TLS cannot be enforced. Exceptions can be made using the `NSExceptionAllowsInsecureHTTPLoads` or `NSThirdPartyExceptionAllowsInsecureHTTPLoads` keys. Apple originally planned to require that all apps submitted to the App Store support ATS in January 2017, however, they have [extended the deadline](https://developer.apple.com/news/?id=12212016b) but have not yet announced a date.
+
+Apple introduced the subkeys `NSAllowsArbitraryLoadsInWebContent`, `NSAllowsLocalNetworking`, and more in iOS 10. Developers can use these subkeys to disable only certain restrictions rather than overriding all ATS restrictions. For more information, see Apple documentation about [NSAppTransportSecurity and ATS configuration basics](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33) on the Apple Developer website.
 
 ## References
 
- * [App Transport Security REQUIRED January 2017](https://forums.developer.apple.com/thread/48979)
  * [Getting Ready for ATS Enforcement in 2017](https://nabla-c0d3.github.io/blog/2016/08/14/ats-enforced-2017/)
  * [Android buckles down and iOS opens up? Trends in platform security affecting developers](https://www.nowsecure.com/blog/2016/08/24/android-buckles-ios-opens-trends-platform-security-affecting-developers/)
  * [iOS 10 Security Changes Slide Deck](https://nabla-c0d3.github.io/blog/2016/09/19/ios10-slide-deck/)
