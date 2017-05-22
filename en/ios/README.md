@@ -6,3 +6,4 @@
 * [6.4 Avoid Caching HTTP(S) Requests/Responses](avoid-caching-https-requests-responses.md)
 * [6.5 Implement App Transport Security (ATS)](implement-app-transport-security.md)
 * [6.6 Implement Touch ID Properly](implement-touch-id-properly.md)
+* [6.7 Declare Intended Use of Protected Data Classes](declare-protected-data.md)
