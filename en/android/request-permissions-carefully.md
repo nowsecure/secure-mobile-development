@@ -16,7 +16,7 @@ Newer Android versions support runtime permissions, which allow developers to re
 * In general it is best to only request the permissions needed for the app to function, and as of Android 6.0 (Marshmallow), [runtime permissions](https://developer.android.com/training/permissions/requesting.html) were introduced to help users and developers agree on acceptable permissions.
 * Make sure to provide context to users about why the permission is needed at runtime.
 
-While runtime permissions can complicate development, with newer Android versions they aren't optional. They can, however, be managed more conveniently with third-party libraries and Java annotations (see [PermissionsDispatcher](https://github.com/hotchemi/PermissionsDispatcher) and [Dexter](https://github.com/Karumi/Dexter).
+While runtime permissions can complicate development, with newer Android versions they aren't optional. They can, however, be managed more conveniently with third-party libraries and Java annotations (see [PermissionsDispatcher](https://github.com/hotchemi/PermissionsDispatcher) and [Dexter](https://github.com/Karumi/Dexter)).
 
 Granting dangerous permissions to your app can make it more of a target. Requesting/gaining the permission only if the user actually needs the functionality can help reduce the specific targeting of your app, or otherwise make it harder to execute an attack.
 
