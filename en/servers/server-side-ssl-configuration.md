@@ -17,13 +17,13 @@ Avoid weak ciphers, such as:
 
 * NULL cipher suite
 * Anonymous Diffie-Hellmann
-* DES and RC4 (because of their vulnerability to crypto-analytical attacks)
+* DES and RC4 because of their vulnerability to crypto-analytical attacks (_NOTE: iOS 10 disables RC4 by default_)
 
 Avoid weak protocols, such as:
 
 * SSLv2
-* SSLv3 (because of its vulnerability to the POODLE attack - [CVE-2014-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-3566))
-* TLS 1.0 and below (because the protocols are vulnerable to the CRIME and BEAST attacks - [CVE-2012-4929](http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2012-4929) and [CVE-2011-3389](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2011-3389) respectively)
+* SSLv3 because of its vulnerability to the POODLE attack - [CVE-2014-3566](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-3566) (_NOTE: In iOS 10, the Apple Secure Transport API no longer supports SSLv3_)
+* TLS 1.0 and earlier because the protocols are vulnerable to the CRIME ([CVE-2012-4929](http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2012-4929))  and BEAST ([CVE-2011-3389](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2011-3389)) attacks
 
 Reference the OWASP [Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet) for more information about how to securely design and configure transport layer security for an app.
 
