@@ -1,8 +1,8 @@
-# Follow WebView Best Practices
+# 7.9 Follow WebView Best Practices
 
 ## Details
 
-WebViews can introduce a number of security concerns and should be implemented carefully. In particular, a number of exploitable vulnerabilities arising from the use of the addJavscriptInterface API have been discovered.
+WebViews can introduce a number of security concerns and should be implemented carefully. In particular, a number of exploitable vulnerabilities arising from the use of the `addJavscriptInterface` API have been discovered.
 
 ## Remediation
 
@@ -10,7 +10,10 @@ Disable JavaScript and Plugin support if they are not needed. While both are dis
 
 Disallow the loading of content from third-party hosts. This can be difficult to achieve from within the app. However, a developer can override shouldOverrideUrlLoading and shouldInterceptRequest to intercept, inspect, and validate most requests initiated from within a WebView. A developer may also consider implementing a whitelist scheme by using the URI class to inspect components of a URI to ensure it matches an entry within a list of approved resources.
 
-Sample code [https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a](https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a)
+See [https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a](https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a) for a snippet of sample code that includes some WebView security best practices.
+
+Note that WebView does not honor the Android Manifest flag `android:usesCleartextTraffic` which can help prevent an app from using cleartext network traffic (e.g., HTTP and FTP without TLS). 
+
 
 ## References
 
@@ -19,5 +22,5 @@ Sample code [https://gist.github.com/scottyab/6f51bbd82a0ffb08ac7a](https://gist
 
 ## CWE/OWASP
 
- * [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
- * [CWE-79: Improper Neutralization of Input During Web Page Generation (Cross-site Scripting)](http://cwe.mitre.org/data/definitions/79.html)
+ * OWASP Mobile Top 10: [M7 - Client Code Quality](https://www.owasp.org/index.php/Mobile_Top_10_2016-M7-Poor_Code_Quality)
+ * CWE: [CWE-79 - Improper Neutralization of Input During Web Page Generation (Cross-site Scripting)](http://cwe.mitre.org/data/definitions/79.html)
