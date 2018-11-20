@@ -5,7 +5,7 @@ Most mobile devices have a unique ID, also called a Universal Unique Identifier 
 
 Unfortunately, this approach brings with it several privacy and security issues. First, many online systems have connected the UUID of a device to an individual user to enable tracking across applications even when the user is not logged in to the app. This advanced ability to track a user has become a major privacy concern.
 
-Beyond that, apps which identify a person through the UUID risk exposing the data of a device's previous owner to a new owner. In one instance, after re-setting an iPhone, we gained access to the prior user's account for an online music service even though all user data had been erased. Not only is this a privacy issue, it's asecurity threat because an attacker could fake a UUID.
+Beyond that, apps which identify a person through the UUID risk exposing the data of a device's previous owner to a new owner. In one instance, after re-setting an iPhone, we gained access to the prior user's account for an online music service even though all user data had been erased. Not only is this a privacy issue, it's a security threat because an attacker could fake a UUID.
 
 Apple has recognized both the privacy and security risks of iOS's UDID and removed developer access to it. With the UDID out of reach, some developers apply other device-identification methods involving the MAC address of the wireless network interface or OpenUDID. These methods have now been banned at the system/API level and are also flagged and rejected as part of the AppStore review process.
 
