@@ -24,3 +24,4 @@ Improper implementation could result in data leakage, restricted functions being
 
  * [M1 - Improper Platform Usage](https://www.owasp.org/index.php/Mobile_Top_10_2016-M1-Improper_Platform_Usage), [M3 - Insecure Communication](https://www.owasp.org/index.php/Mobile_Top_10_2016-M2-Insecure_Data_Storage)
  * [CWE 927](http://cwe.mitre.org/data/definitions/316.html)
+* [Android: Access to app protected components](https://blog.oversecured.com/Android-Access-to-app-protected-components/)
