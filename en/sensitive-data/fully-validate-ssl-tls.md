@@ -79,22 +79,26 @@ Pinning certificates to a default Apache HTTP client shipped with Android consis
 
 The following sample code demonstrates how a BKS keystore can be loaded:
 
-`    InputStream in = resources.openRawResource(certificateRawResource);
+```
+InputStream in = resources.openRawResource(certificateRawResource);
 
-    keyStore = KeyStore.getInstance("BKS");
-    keyStore.load(resourceStream, password);`
+keyStore = KeyStore.getInstance("BKS");
+keyStore.load(resourceStream, password);
+```
 
 The constructed httpClient instance can be configured to only allow requests to host that present certificates that have been signed with certificates stored inside the application.
 
 The following sample code illustrates this approach:
-`    HttpParams httpParams = new BasicHttpParams();
 
-    SchemeRegistry schemeRegistry = new SchemeRegistry();
-    schemeRegistry.register(new Scheme("https", new SSLSocketFactory(keyStore), 443));
+```
+HttpParams httpParams = new BasicHttpParams();
 
-    ThreadSafeClientConnManager clientMan = new ThreadSafeClientConnManager(httpParams, schemeRegistry);
+SchemeRegistry schemeRegistry = new SchemeRegistry();
+schemeRegistry.register(new Scheme("https", new SSLSocketFactory(keyStore), 443));
+ThreadSafeClientConnManager clientMan = new ThreadSafeClientConnManager(httpParams, schemeRegistry);
 
-    httpClient = new DefaultHttpClient(clientMan, httpParams);`
+httpClient = new DefaultHttpClient(clientMan, httpParams);
+```
 
 For more information on implementing certificate pinning in Android, refer to the OWASP [Certificate and Public Key Pinning guide](https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android) -  https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android.
 
