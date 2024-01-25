@@ -1,6 +1,6 @@
-# Secure Mobile Development
+# Secure Mobile Development (circa May 2017)
 
-At NowSecure we spend a lot of time attacking mobile apps - hacking, breaking encryption, finding flaws, penetration testing, and looking for sensitive data stored insecurely. We do it for the right reasons - to help developers make their apps more secure.  The best way to verify that your app follows secure mobile development best practices is to perform security assessments of the app, which can include automated mobile app security testing, [fuzzing](https://www.owasp.org/index.php/Fuzzing), manual penetration testing, and more. This document represents some of the knowledge we share with our clients and partners. **We are driven to advance mobile app security worldwide.**
+At NowSecure we spend a lot of time attacking mobile apps - hacking, breaking encryption, finding flaws, penetration testing, and looking for sensitive data stored insecurely. We do it for the right reasons - to help developers make their apps more secure.  The best way to verify that your app follows secure mobile development best practices is to perform security assessments of the app, which can include automated mobile app security testing, [fuzzing](https://www.owasp.org/index.php/Fuzzing), manual penetration testing, and more. This document represents some of the knowledge we share with our clients and partners. **Please note that some of this information may be outdated. For further assistance visit <a href="https://www.nowsecure.com/contact/">NowSecure</a> or contact <a href="mailto:info@nowsecure.com?subject=Secure Mobile Development Book">info@nowsecure.com</a>**
 
 ## Using this Guide
 
